@@ -68,7 +68,10 @@ function setParisPerformersSoldFact()
         foreach(_productFact, JOINTURE_PARIS_LEAF_PRODUCT_SALES_FACTS_SELECTION.selectedFacts){
                topTypeProductsFacts.add(_productFact);
         }
-        */ 
+        
         getGeneralData().topProductParisSalesSorter = JOINTURE_PARIS_LEAF_PRODUCT_SALES_FACTS_SELECTION>>selectedFacts;
+        */ 
+        getGeneralData().topProductParisSalesFacts = sorter.getTopNFacts(5);
+        getGeneralData().topProductParisSalesSorter = sorter;
     }
 ;

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="C:/yseop/projects/Training/dialog/../dialog/output.xsl"?>
+<y:output xmlns:y="http://www.yseop.com/engine/3" xmlns:yt="http://www.yseop.com/text/2" xmlns:yd="http://www.yseop.com/dialog/1" xmlns:yd-b="http://www.yseop.com/dialog/binding/1" xmlns:i18n="http://apache.org/cocoon/i18n/2.1" xmlns:fd="http://apache.org/cocoon/forms/1.0#definition" xmlns:ft="http://apache.org/cocoon/forms/1.0#template" xmlns:fi="http://apache.org/cocoon/forms/1.0#instance" xmlns:fb="http://apache.org/cocoon/forms/1.0#binding">
+	<y:data-end>
+		<y:logging>
+			<y:log
+				index="1"
+				level="fatal"
+				nature="alert"
+				origin-nb-ms="262.23">
+				<y:message>The receiver (getGeneralData().cube) of the message is, once evaluated, null</y:message>
+				<y:alert-type
+					type="kb-alert"
+					sub-type-code="30"
+					sub-type-name="implicit-check"
+					code="B101"
+					owner="yseop"
+					source="yseop-engine"/>
+				<y:kb-context>
+					<y:act
+						file="_domainObjects/entryPoints.dcl"
+						line="8"
+						top="5">(getGeneralData().cube).init()</y:act>
+					<y:act-previous
+						file="_domainObjects/entryPoints.dcl"
+						line="6">_businessRules:myBusinessRules()</y:act-previous>
+				</y:kb-context>
+			</y:log>
+		</y:logging>
+		<y:synthesis>
+			<y:language
+				id="fr"/>
+			<y:random
+				seed="195205446"
+				peak="0"/>
+			<y:process
+				id="2BD4"
+				start-runtime="2019-06-27T15:52:47.255"
+				runtime="erunbc_"
+				engine-version="7.2.4"
+				os="WINDOWS 6.2"
+				computer-name="PVAL-89"/>
+			<y:key-user
+				name="For Yseop internal use - By AK"
+				email="akaeser@yseop.com"
+				creation-date="2019-03-07"
+				expiration-date="2019-12-30"/>
+			<y:request-exec-time
+				begin="2019-06-27T15:52:47.308"
+				end="2019-06-27T15:52:47.573"/>
+			<y:stat
+				errors="1"
+				warnings="0"
+				success-rule-fire="0"
+				text-write="0"
+				main-words="0"
+				main-chars="0"/>
+		</y:synthesis>
+	</y:data-end>
+</y:output>

@@ -104,11 +104,34 @@ interface GeneralData
             --> root "bottomProductParisFact"
             --> number SINGULAR
         ;
+    field topProductParisSalesFacts
+        --> domainsLevel2 LibCube:Fact
+        --> domains Collection
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "topProductParisSalesFacts"
+            --> number PLURAL
+        ;
     field topProductParisSalesSorter
         --> domains LibCube:FactsSorter
         --> dsl -> Textualization
             --> language LANG_en
             --> root "topProductParisSalesSorter"
+            --> number SINGULAR
+        ;
+    field nyGlobalSalePreviousYear
+        --> domainsLevel2 LibCube:Fact
+        --> domains Collection
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "nyGlobalSalePreviousYear"
+            --> number SINGULAR
+        ;
+    field district
+        --> domains LibCube:Fact
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "district"
             --> number SINGULAR
         ;
     classProperties
