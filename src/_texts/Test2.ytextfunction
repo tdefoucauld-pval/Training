@@ -4,7 +4,7 @@
         <yseop-yml:granuleI18nContents>
             <yseop-yml:granuleUnilingueContent locale="fr">
                 <yseop-yml:granuleContent>
-                    <yseop-yml:text/>
+                    <yseop-yml:text>Test </yseop-yml:text>
                     <yseop-yml:inline-assemblies/>
                     <yseop-yml:inline-dslFunctionCalls/>
                 </yseop-yml:granuleContent>
