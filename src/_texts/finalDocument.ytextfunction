@@ -6,7 +6,7 @@
                 <yseop-yml:granuleContent>
                     <yseop-yml:text>
 \beginStyle(BOLD_STYLE)
-    Résultat pour la ville de
+    Résultats pour la ville de
     \value(theGeneralData.ccsGlobalSalePreviousYear.getDimension(DIMENSION_CITY).label)
     :
     \p()
@@ -112,7 +112,7 @@ exemplaires pour une valeur de
 \p()
 
 \beginStyle(BOLD_STYLE)
-    Résultat pour la ville de
+    Résultats pour la ville de
     \value(CITY_NEW_YORK)
     :
     \p()
