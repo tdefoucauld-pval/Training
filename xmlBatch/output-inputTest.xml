@@ -1,41 +1,278 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="C:/yseop/projects/Training/dialog/../dialog/output.xsl"?>
 <y:output xmlns:y="http://www.yseop.com/engine/3" xmlns:yt="http://www.yseop.com/text/2" xmlns:yd="http://www.yseop.com/dialog/1" xmlns:yd-b="http://www.yseop.com/dialog/binding/1" xmlns:i18n="http://apache.org/cocoon/i18n/2.1" xmlns:fd="http://apache.org/cocoon/forms/1.0#definition" xmlns:ft="http://apache.org/cocoon/forms/1.0#template" xmlns:fi="http://apache.org/cocoon/forms/1.0#instance" xmlns:fb="http://apache.org/cocoon/forms/1.0#binding">
+	<y:results>
+		<y:texts>
+			<y:txt id="finalDocument" index="1" name="text1" format="xml-dialect"><yt:bold>Résultat pour la ville de Paris:<yt:par/>Magasin Capital Cheese Store</yt:bold><yt:par/>En 2017, 4109 unités de fromage ont été vendues pour un total de 39279.89 €.<yt:line/>Le fromage American du type Processed Cheese à été vendu à 486 exemplaires pour un montant total de 3717.9 €.<yt:line/>Le fromage le plus vendu est le Cheddar du type Semi Hard Cheese avec 854 exemplaires pour un montant de 10307.78 €, soit 26.24% des ventes totales du magasin.<yt:par/><yt:bold>Magasin Deluxe Cheese Store<yt:par/></yt:bold>En 2017, 3087 unités de fromage ont été vendues pour un total de 37486.23 €.<yt:line/>Le fromage Provologne du type Processed Cheese à été vendu à 365 exemplaires pour un montant total de 3441.95 €.<yt:line/>Le fromage le plus vendu est le Buffalo du type Fresh Cheese avec 635 exemplaires pour un montant de 8591.55 €, soit 22.92% des ventes totales du magasin.<yt:par/>Au total pour la ville de Paris, le fromage le plus vendu est le Buffalo du type Fresh Cheese avec 1620 exemplaires pour une valeur de 18382.45 €. Le fromage le moins vendu est le Costeño du type Fresh Cheese avec 374 exemplaires pour une valeur de 3803.41 €.<yt:par/>La liste des 5 fromages les plus vendus à Paris est la suivante: 
+				<yt:enum numbering="decimal"><yt:item>Le fromage Buffalo avec un total de 18382.45 €.</yt:item> <yt:item>Le fromage Cheddar avec un total de 16675.06 €.</yt:item> <yt:item>Le fromage Provologne avec un total de 11531.63 €.</yt:item> <yt:item>Le fromage Swiss avec un total de 8330 €.</yt:item> <yt:item>Le fromage American avec un total de 7389.36 €.</yt:item>
+				</yt:enum><yt:par/><yt:par/><yt:bold>Résultat pour la ville de New York:<yt:par/></yt:bold>
+				<yt:enum numbering="bullet"><yt:item><yt:bold>Magasin American Special Cheeses</yt:bold><yt:par/>En 2017, 3144 unités de fromage ont été vendues pour un total de 35852.64 €.<yt:par/></yt:item><yt:item><yt:bold>Magasin Cheese For All</yt:bold><yt:par/>En 2017, 4427 unités de fromage ont été vendues pour un total de 45756.05 €.<yt:par/></yt:item>
+				</yt:enum>
+			</y:txt>
+		</y:texts>
+	</y:results>
+	<y:dataset>
+		<y:action command="next-request"></y:action>
+		<y:dialog-session>
+			<y:request-count>1</y:request-count>
+			<y:start-timestamp>2019-06-27T16:23:32.020</y:start-timestamp>
+		</y:dialog-session>
+		<y:data>
+			<y:instance yid="theGeneralData"/>
+		</y:data>
+		<y:gathering-store></y:gathering-store>
+	</y:dataset>
+	<y:settings></y:settings>
 	<y:data-end>
 		<y:logging>
 			<y:log
 				index="1"
-				level="fatal"
+				level="warning"
 				nature="alert"
-				origin-nb-ms="262.23">
-				<y:message>The receiver (getGeneralData().cube) of the message is, once evaluated, null</y:message>
+				origin-nb-ms="0.80">
+				<y:message>The Xml attributes yclass=City and yid=CITY_ALL are present all together: CITY_ALL is an existing object, therefore yclass is useless and therefore ignored (current line = 20, file = C:\yseop\projects\Training\xmlBatch\inputTest.xml)</y:message>
+				<y:alert-type
+					type="external-alert"
+					sub-type-code="35"
+					sub-type-name="xml-read"
+					code="W241"
+					owner="external"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="2"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="0.85">
+				<y:message>The Xml attributes yclass=City and yid=CITY_NEW_YORK are present all together: CITY_NEW_YORK is an existing object, therefore yclass is useless and therefore ignored (current line = 24, file = C:\yseop\projects\Training\xmlBatch\inputTest.xml)</y:message>
+				<y:alert-type
+					type="external-alert"
+					sub-type-code="35"
+					sub-type-name="xml-read"
+					code="W241"
+					owner="external"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="3"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="0.90">
+				<y:message>The Xml attributes yclass=City and yid=CITY_PARIS are present all together: CITY_PARIS is an existing object, therefore yclass is useless and therefore ignored (current line = 34, file = C:\yseop\projects\Training\xmlBatch\inputTest.xml)</y:message>
+				<y:alert-type
+					type="external-alert"
+					sub-type-code="35"
+					sub-type-name="xml-read"
+					code="W241"
+					owner="external"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="4"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="0.98">
+				<y:message>The Xml attributes yclass=Product and yid=PRODUCT_ALL are present all together: PRODUCT_ALL is an existing object, therefore yclass is useless and therefore ignored (current line = 52, file = C:\yseop\projects\Training\xmlBatch\inputTest.xml)</y:message>
+				<y:alert-type
+					type="external-alert"
+					sub-type-code="35"
+					sub-type-name="xml-read"
+					code="W241"
+					owner="external"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="5"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="1.03">
+				<y:message>The Xml attributes yclass=Product and yid=PRODUCT_PROVOLOGNE are present all together: PRODUCT_PROVOLOGNE is an existing object, therefore yclass is useless and therefore ignored (current line = 60, file = C:\yseop\projects\Training\xmlBatch\inputTest.xml)</y:message>
+				<y:alert-type
+					type="external-alert"
+					sub-type-code="35"
+					sub-type-name="xml-read"
+					code="W241"
+					owner="external"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="6"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="1.07">
+				<y:message>The Xml attributes yclass=Product and yid=PRODUCT_AMERICAN are present all together: PRODUCT_AMERICAN is an existing object, therefore yclass is useless and therefore ignored (current line = 65, file = C:\yseop\projects\Training\xmlBatch\inputTest.xml)</y:message>
+				<y:alert-type
+					type="external-alert"
+					sub-type-code="35"
+					sub-type-name="xml-read"
+					code="W241"
+					owner="external"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="7"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="1.22">
+				<y:message>The Xml attributes yclass=Store and yid=STORE_ALL are present all together: STORE_ALL is an existing object, therefore yclass is useless and therefore ignored (current line = 119, file = C:\yseop\projects\Training\xmlBatch\inputTest.xml)</y:message>
+				<y:alert-type
+					type="external-alert"
+					sub-type-code="35"
+					sub-type-name="xml-read"
+					code="W241"
+					owner="external"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="8"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="1.30">
+				<y:message>The Xml attributes yclass=Store and yid=STORE_CAPITAL_CHEESE_STORE are present all together: STORE_CAPITAL_CHEESE_STORE is an existing object, therefore yclass is useless and therefore ignored (current line = 135, file = C:\yseop\projects\Training\xmlBatch\inputTest.xml)</y:message>
+				<y:alert-type
+					type="external-alert"
+					sub-type-code="35"
+					sub-type-name="xml-read"
+					code="W241"
+					owner="external"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="9"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="1.40">
+				<y:message>The Xml attributes yclass=Store and yid=STORE_DELUXE_CHEESE_STORE are present all together: STORE_DELUXE_CHEESE_STORE is an existing object, therefore yclass is useless and therefore ignored (current line = 165, file = C:\yseop\projects\Training\xmlBatch\inputTest.xml)</y:message>
+				<y:alert-type
+					type="external-alert"
+					sub-type-code="35"
+					sub-type-name="xml-read"
+					code="W241"
+					owner="external"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="10"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="14.61">
+				<y:message>It is more efficient to exploit symbolic objects as a key (here 1)</y:message>
 				<y:alert-type
 					type="kb-alert"
 					sub-type-code="30"
 					sub-type-name="implicit-check"
-					code="B101"
+					code="W82"
 					owner="yseop"
 					source="yseop-engine"/>
-				<y:kb-context>
-					<y:act
-						file="_domainObjects/entryPoints.dcl"
-						line="8"
-						top="5">(getGeneralData().cube).init()</y:act>
-					<y:act-previous
-						file="_domainObjects/entryPoints.dcl"
-						line="6">_businessRules:myBusinessRules()</y:act-previous>
-				</y:kb-context>
+			</y:log>
+			<y:log
+				index="11"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="17.98">
+				<y:message>Garbage collector dynTableValues (4653 to free in 29962) (call number 1)</y:message>
+				<y:alert-type
+					type="kb-alert"
+					sub-type-code="30"
+					sub-type-name="implicit-check"
+					code="W87"
+					owner="yseop"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="12"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="21.63">
+				<y:message>Garbage collector dynTableValues (4653 to free in 29962) (call number 2)</y:message>
+				<y:alert-type
+					type="kb-alert"
+					sub-type-code="30"
+					sub-type-name="implicit-check"
+					code="W87"
+					owner="yseop"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="13"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="25.23">
+				<y:message>Garbage collector dynTableValues (4653 to free in 29962) (call number 3)</y:message>
+				<y:alert-type
+					type="kb-alert"
+					sub-type-code="30"
+					sub-type-name="implicit-check"
+					code="W87"
+					owner="yseop"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="14"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="29.21">
+				<y:message>Garbage collector dynTableValues (4653 to free in 29962) (call number 4)</y:message>
+				<y:alert-type
+					type="kb-alert"
+					sub-type-code="30"
+					sub-type-name="implicit-check"
+					code="W87"
+					owner="yseop"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="15"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="32.81">
+				<y:message>Garbage collector dynTableValues (4653 to free in 29962) (call number 5)</y:message>
+				<y:alert-type
+					type="kb-alert"
+					sub-type-code="30"
+					sub-type-name="implicit-check"
+					code="W87"
+					owner="yseop"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="16"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="36.33">
+				<y:message>Garbage collector dynTableValues (4653 to free in 29962) (call number 6)</y:message>
+				<y:alert-type
+					type="kb-alert"
+					sub-type-code="30"
+					sub-type-name="implicit-check"
+					code="W87"
+					owner="yseop"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="17"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="39.88">
+				<y:message>Garbage collector dynTableValues (4653 to free in 29962) (call number 7)</y:message>
+				<y:alert-type
+					type="kb-alert"
+					sub-type-code="30"
+					sub-type-name="implicit-check"
+					code="W87"
+					owner="yseop"
+					source="yseop-engine"/>
 			</y:log>
 		</y:logging>
 		<y:synthesis>
 			<y:language
-				id="fr"/>
+				id="en"/>
 			<y:random
-				seed="195205446"
+				seed="520548471"
 				peak="0"/>
 			<y:process
-				id="2BD4"
-				start-runtime="2019-06-27T15:52:47.255"
+				id="190C"
+				start-runtime="2019-06-27T16:23:31.974"
 				runtime="erunbc_"
 				engine-version="7.2.4"
 				os="WINDOWS 6.2"
@@ -46,15 +283,15 @@
 				creation-date="2019-03-07"
 				expiration-date="2019-12-30"/>
 			<y:request-exec-time
-				begin="2019-06-27T15:52:47.308"
-				end="2019-06-27T15:52:47.573"/>
+				begin="2019-06-27T16:23:32.020"
+				end="2019-06-27T16:23:32.072"/>
 			<y:stat
-				errors="1"
-				warnings="0"
+				errors="0"
+				warnings="17"
 				success-rule-fire="0"
-				text-write="0"
-				main-words="0"
-				main-chars="0"/>
+				text-write="85"
+				main-words="293"
+				main-chars="1592"/>
 		</y:synthesis>
 	</y:data-end>
 </y:output>

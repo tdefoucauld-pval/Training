@@ -4,6 +4,8 @@
 *~
 /xmlBatch/outputTest.xml
 /xmlBatch/result.html
+/xmlBatch/output-inputTest.xml
+/xmlBatch/output-inputTest.html
 *.yma
 *.ini
 

@@ -2,7 +2,7 @@ interface GeneralData
     field language
         --> domains Language
         --> dsl -> Textualization
-            --> language LANG_fr
+            --> language LANG_en
             --> root "langage"
             --> number SINGULAR
         ;
