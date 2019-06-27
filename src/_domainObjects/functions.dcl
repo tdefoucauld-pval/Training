@@ -4,6 +4,7 @@ function setSelectedFacts()
    getGeneralData().ccsGlobalSalePreviousYear = JOINTURE_PARIS_GLOBAL_SALES_FACTS_SELECTION.selectedFact;
    getGeneralData().dcsProvologneSalePreviousYear = JOINTURE_DCS_PROVOLOGNE_SALES_FACTS_SELECTION.selectedFact;
    getGeneralData().dcsGlobalSalePreviousYear = JOINTURE_DCS_GLOBAL_SALES_FACTS_SELECTION.selectedFact;
+   getGeneralData().nyGlobalSalePreviousYear = JOINTURE_NY_GLOBAL_SALES_FACTS_SELECTION>>selectedFacts;
 }
 ;
 
@@ -69,7 +70,7 @@ function setParisPerformersSoldFact()
                topTypeProductsFacts.add(_productFact);
         }
         
-        getGeneralData().topProductParisSalesSorter = JOINTURE_PARIS_LEAF_PRODUCT_SALES_FACTS_SELECTION>>selectedFacts;
+        getGeneralData().topProductParisSalesFacts = JOINTURE_PARIS_LEAF_PRODUCT_SALES_FACTS_SELECTION>>selectedFacts;
         */ 
         getGeneralData().topProductParisSalesFacts = sorter.getTopNFacts(5);
         getGeneralData().topProductParisSalesSorter = sorter;

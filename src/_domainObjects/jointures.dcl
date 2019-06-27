@@ -210,3 +210,34 @@ LibCube:Jointure JOINTURE_PARIS_LEAF_PRODUCT_SALES_FACTS
 LibCube:JointureFactsSelection JOINTURE_PARIS_LEAF_PRODUCT_SALES_FACTS_SELECTION
    --> jointure JOINTURE_PARIS_LEAF_PRODUCT_SALES_FACTS
 ;
+
+
+LibCube:Jointure JOINTURE_NY_GLOBAL_SALES_FACTS
+   --> dimensionConditions
+      -> List
+         --> values
+            -> LibCube:JointureDimensionCondition
+               --> dimension DIMENSION_CITY
+               --> members CITY_NEW_YORK
+               ;,
+ 
+            -> LibCube:JointureDimensionCondition
+               --> dimension DIMENSION_STORE
+               --> membersCollection minus (Store, {STORE_ALL})
+               ;,
+ 
+            -> LibCube:JointureDimensionCondition
+               --> dimension DIMENSION_PRODUCT
+               --> members PRODUCT_ALL
+               ;,
+ 
+            -> LibCube:JointureDimensionCondition
+               --> dimension DIMENSION_TIME
+               --> members getGeneralData().previousPeriod
+               ;
+         ;
+   ;
+
+LibCube:JointureFactsSelection JOINTURE_NY_GLOBAL_SALES_FACTS_SELECTION
+   --> jointure JOINTURE_NY_GLOBAL_SALES_FACTS
+;

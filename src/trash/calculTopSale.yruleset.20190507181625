@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRuleset xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="9db1d10f-3f3c-4e1d-963d-49d1e30a12a9">
+    <yseop-yml:name>calculTopSale</yseop-yml:name>
+    <yseop-yml:properties identifier="a3913680-906a-46b4-8bd1-29637a8c20db">
+        <yseop-yml:property identifier="a3913680-906a-46b4-8bd1-29637a8c20db|dsl" type="YML_PROPERTY" name="dsl">"calcul top sale"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRuleset>

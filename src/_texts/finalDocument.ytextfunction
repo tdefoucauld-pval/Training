@@ -99,9 +99,39 @@ exemplaires pour une valeur de
 €.
 \p()
 
-\foreach(_libCube:Fact, theGeneralData.topProductParisSalesSorter.getTopNFacts(5), #JV3N#)
+\foreach(_libCube:Fact, theGeneralData.topProductParisSalesFacts, #JV3N#)
     Le fromage
-    avec un total de €.
+    \value(_libCube:Fact.getDimension(DIMENSION_PRODUCT).label)
+    avec un total de
+    \value(_libCube:Fact.getMeasure(MEASURE_SALE_VALUE).value)
+    €.
+
+\endForeach
+
+\p()
+\p()
+
+\beginStyle(BOLD_STYLE)
+    Résultat pour la ville de
+    \value(CITY_NEW_YORK)
+    :
+    \p()
+\endStyle
+
+
+\foreach(_libCube:Fact, theGeneralData.nyGlobalSalePreviousYear, #en#)
+
+    \beginStyle(BOLD_STYLE)
+        Magasin
+        \value(_libCube:Fact.getDimension(DIMENSION_STORE).label)
+    \endStyle
+    \p()
+    En 2017,
+    \value(_libCube:Fact.getMeasure(MEASURE_SOLD_UNITS).value)
+    unités de fromage ont été vendues pour un total de
+    \value(_libCube:Fact.getMeasure(MEASURE_SALE_VALUE).value)
+    €.
+    \p()
 
 \endForeach
 </yseop-yml:text>
@@ -121,7 +151,52 @@ exemplaires pour une valeur de
                                 <yseop-yml:endOfLastItemSuffixOtherText/>
                             </yseop-yml:bulletListGeneralOptions>
                             <yseop-yml:beginEndWithOptions>
-                                <yseop-yml:generalBeginWithText>Les 5 fromages les plus vendus à Paris sont : </yseop-yml:generalBeginWithText>
+                                <yseop-yml:generalBeginWithText>La liste des 5 fromages les plus vendus à Paris est la suivante :</yseop-yml:generalBeginWithText>
+                                <yseop-yml:generalEndWithText/>
+                                <yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemBeginWithSpecificText/>
+                                <yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemEndWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalBeginWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalEndWithSpecificText/>
+                                <yseop-yml:noItemGenerateNothingSelected>true</yseop-yml:noItemGenerateNothingSelected>
+                                <yseop-yml:noItemSentenceText/>
+                                <yseop-yml:inGeneralBulletBeginSameAsListSelected>true</yseop-yml:inGeneralBulletBeginSameAsListSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificSelected>false</yseop-yml:inGeneralBulletBeginSpecificSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificText/>
+                                <yseop-yml:inGeneralBulletEndSameAsListSelected>true</yseop-yml:inGeneralBulletEndSameAsListSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificSelected>false</yseop-yml:inGeneralBulletEndSpecificSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificText/>
+                            </yseop-yml:beginEndWithOptions>
+                            <yseop-yml:limitSizeOptions>
+                                <yseop-yml:noLimitSelected>true</yseop-yml:noLimitSelected>
+                                <yseop-yml:onlyFirstElementsSelected>true</yseop-yml:onlyFirstElementsSelected>
+                                <yseop-yml:onlyFirstElementsNumberValue>3</yseop-yml:onlyFirstElementsNumberValue>
+                                <yseop-yml:sentenceSizeTypeValue>30</yseop-yml:sentenceSizeTypeValue>
+                                <yseop-yml:limitByTypeValue>words</yseop-yml:limitByTypeValue>
+                                <yseop-yml:limitByTypeNumber>0</yseop-yml:limitByTypeNumber>
+                                <yseop-yml:sentenceEndEtcSelected>true</yseop-yml:sentenceEndEtcSelected>
+                                <yseop-yml:sentenceEndOtherText/>
+                            </yseop-yml:limitSizeOptions>
+                        </yseop-yml:bulletLinkAssembly>
+                        <yseop-yml:bulletLinkAssembly name="en" language="en">
+                            <yseop-yml:bulletListGeneralOptions>
+                                <yseop-yml:isNumberedList>false</yseop-yml:isNumberedList>
+                                <yseop-yml:isDecimalTypeSelected>true</yseop-yml:isDecimalTypeSelected>
+                                <yseop-yml:isLowerAlphaTypeSelected>false</yseop-yml:isLowerAlphaTypeSelected>
+                                <yseop-yml:isUpperAlphaTypeSelected>false</yseop-yml:isUpperAlphaTypeSelected>
+                                <yseop-yml:isLowerRomanTypeSelected>false</yseop-yml:isLowerRomanTypeSelected>
+                                <yseop-yml:isUpperRomanTypeSelected>false</yseop-yml:isUpperRomanTypeSelected>
+                                <yseop-yml:firstLetterUpperCaseForEachBullet>_NEVER</yseop-yml:firstLetterUpperCaseForEachBullet>
+                                <yseop-yml:endOfItemSuffixNothingSelected>true</yseop-yml:endOfItemSuffixNothingSelected>
+                                <yseop-yml:endOfItemSuffixOtherText/>
+                                <yseop-yml:endOfLastItemSuffixNothingSelected>true</yseop-yml:endOfLastItemSuffixNothingSelected>
+                                <yseop-yml:endOfLastItemSuffixOtherText/>
+                            </yseop-yml:bulletListGeneralOptions>
+                            <yseop-yml:beginEndWithOptions>
+                                <yseop-yml:generalBeginWithText/>
                                 <yseop-yml:generalEndWithText/>
                                 <yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>
                                 <yseop-yml:onlyOneItemBeginWithSpecificText/>

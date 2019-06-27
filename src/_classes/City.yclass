@@ -1,4 +1,32 @@
 interface City extends LibCube:HierarchyElement
+    field quarter
+        --> domains Text
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "region"
+            --> number SINGULAR
+        ;
+    field firstDistrict
+        --> domains Text
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "firstDistrict"
+            --> number SINGULAR
+        ;
+    field zipCode
+        --> domains Integer
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "zipCode"
+            --> number SINGULAR
+        ;
+    field numberOfHabitantsFact
+        --> domains LibCube:Fact
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "numberOfHabitantsFact"
+            --> number SINGULAR
+        ;
     classProperties
     --> dsl -> Textualization
         --> language LANG_en

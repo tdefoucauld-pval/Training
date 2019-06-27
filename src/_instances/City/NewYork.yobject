@@ -1,0 +1,7 @@
+City CITY_NEW_YORK
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "New York"
+        --> number SINGULAR
+    ;
+;
