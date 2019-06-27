@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="b37f5876-fa52-4c00-b7b9-29b5f349d25f">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="140512ca-1447-4eb5-9a75-2f4294ea5516">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2019-06-27T16:21:16.996Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="485ab72e-9d23-4ab9-8601-997365c2f027">
+            <yseop-yml:property identifier="485ab72e-9d23-4ab9-8601-997365c2f027|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name/>
+    <yseop-yml:properties identifier="0aef3171-640e-47ce-a522-c7b7a6e68f9e">
+        <yseop-yml:property identifier="0aef3171-640e-47ce-a522-c7b7a6e68f9e|dsl" type="YML_PROPERTY" name="dsl">"Test 5"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>
