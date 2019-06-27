@@ -17,7 +17,7 @@
                     Ecrire le texte entre les 2 balises
                     
                     
-                    <yseop-yml:text/>
+                    </yseop-yml:text>
                     <yseop-yml:inline-assemblies/>
                     <yseop-yml:inline-dslFunctionCalls/>
                 </yseop-yml:granuleContent>
