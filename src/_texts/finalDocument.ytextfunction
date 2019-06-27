@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="d571d6d2-2b71-4821-8465-7cc0547ceaaf">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="e56b3020-8142-4f06-847e-9b92b7eefd6a">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>
+\beginStyle(BOLD_STYLE)
+    Résultat pour la ville de
+    \value(theGeneralData.ccsGlobalSalePreviousYear.getDimension(DIMENSION_CITY).label)
+    :
+    \p()
+    magasin
+    \value(theGeneralData.ccsGlobalSalePreviousYear.getDimension(DIMENSION_STORE).label)
+    \p()
+\endStyle
+
+En 2017,
+\value(theGeneralData.ccsGlobalSalePreviousYear.getMeasure(MEASURE_SOLD_UNITS).value)
+unités de fromage ont été vendues pour un total de
+\value(theGeneralData.ccsGlobalSalePreviousYear.getMeasure(MEASURE_SALE_VALUE).value)
+€.
+\endOfLine
+, le fromage
+\value(theGeneralData.ccsAmericanSalePreviousYear.getDimension(DIMENSION_PRODUCT).label)
+du type
+\value(theGeneralData.ccsAmericanSalePreviousYear.getDimension(DIMENSION_PRODUCT).parent.label)
+à été vendu à
+\value(theGeneralData.ccsAmericanSalePreviousYear.getMeasure(MEASURE_SOLD_UNITS).value)
+exemplaires pour un montant total de
+\value(theGeneralData.ccsAmericanSalePreviousYear.getMeasure(MEASURE_SALE_VALUE).value)
+€.
+\endOfLine
+Le fromage le plus vendu est le
+\value(theGeneralData.topSoldUnitsParisFact.getDimension(DIMENSION_PRODUCT).label)
+du type
+\value(theGeneralData.topSoldUnitsParisFact.getDimension(DIMENSION_PRODUCT).parent.label)
+avec
+\value(theGeneralData.topSoldUnitsParisFact.getMeasure(MEASURE_SOLD_UNITS).value)
+exemplaires pour un montant de
+\value(theGeneralData.topSoldUnitsParisFact.getMeasure(MEASURE_SALE_VALUE).value)
+€, soit
+\value(theGeneralData.ccsMostSoldUnitsPercentage, UNIT_PERCENT)
+des ventes totales du magasin.
+\p()
+
+\beginStyle(BOLD_STYLE)
+    magasin
+    \value(theGeneralData.dcsGlobalSalePreviousYear.getDimension(DIMENSION_STORE).label)
+    \p()
+\endStyle
+
+En 2017,
+\value(theGeneralData.dcsGlobalSalePreviousYear.getMeasure(MEASURE_SOLD_UNITS).value)
+unités de fromage ont été vendues pour un total de
+\value(theGeneralData.dcsGlobalSalePreviousYear.getMeasure(MEASURE_SALE_VALUE).value)
+€.
+\endOfLine
+, le fromage
+\value(theGeneralData.dcsProvologneSalePreviousYear.getDimension(DIMENSION_PRODUCT).label)
+du type
+\value(theGeneralData.dcsProvologneSalePreviousYear.getDimension(DIMENSION_PRODUCT).parent.label)
+à été vendu à
+\value(theGeneralData.dcsProvologneSalePreviousYear.getMeasure(MEASURE_SOLD_UNITS).value)
+exemplaires pour un montant total de
+\value(theGeneralData.dcsProvologneSalePreviousYear.getMeasure(MEASURE_SALE_VALUE).value)
+€.
+\endOfLine
+Le fromage le plus vendu est le
+\value(theGeneralData.topSoldUnitsDCSFact.getDimension(DIMENSION_PRODUCT).label)
+du type
+\value(theGeneralData.topSoldUnitsDCSFact.getDimension(DIMENSION_PRODUCT).parent.label)
+avec
+\value(theGeneralData.topSoldUnitsDCSFact.getMeasure(MEASURE_SOLD_UNITS).value)
+exemplaires pour un montant de
+\value(theGeneralData.topSoldUnitsDCSFact.getMeasure(MEASURE_SALE_VALUE).value)
+€, soit
+\value(theGeneralData.dcsMostSoldUnitsPercentage, UNIT_PERCENT)
+des ventes totales du magasin.
+\p()
+Au total pour la ville de
+\value(theGeneralData.topProductParisFact.getDimension(DIMENSION_CITY).label)
+, le fromage le plus vendu est le
+\value(theGeneralData.topProductParisFact.getDimension(DIMENSION_PRODUCT).label)
+du type
+\value(theGeneralData.topProductParisFact.getDimension(DIMENSION_PRODUCT).parent.label)
+avec
+\value(theGeneralData.topProductParisFact.getMeasure(MEASURE_SOLD_UNITS).value)
+exemplaires pour une valeur de
+\value(theGeneralData.topProductParisFact.getMeasure(MEASURE_SALE_VALUE).value)
+€. Le fromage le moins vendu est le
+\value(theGeneralData.bottomProductParisFact.getDimension(DIMENSION_PRODUCT).label)
+du type
+\value(theGeneralData.bottomProductParisFact.getDimension(DIMENSION_PRODUCT).parent.label)
+avec
+\value(theGeneralData.bottomProductParisFact.getMeasure(MEASURE_SOLD_UNITS).value)
+exemplaires pour une valeur de
+\value(theGeneralData.bottomProductParisFact.getMeasure(MEASURE_SALE_VALUE).value)
+€.
+\p()
+
+\foreach(_libCube:Fact, theGeneralData.topProductParisSalesSorter.getTopNFacts(5), #JV3N#)
+    Le fromage
+    avec un total de €.
+
+\endForeach
+</yseop-yml:text>
+                    <yseop-yml:inline-assemblies>
+                        <yseop-yml:bulletLinkAssembly name="JV3N" language="en">
+                            <yseop-yml:bulletListGeneralOptions>
+                                <yseop-yml:isNumberedList>true</yseop-yml:isNumberedList>
+                                <yseop-yml:isDecimalTypeSelected>true</yseop-yml:isDecimalTypeSelected>
+                                <yseop-yml:isLowerAlphaTypeSelected>false</yseop-yml:isLowerAlphaTypeSelected>
+                                <yseop-yml:isUpperAlphaTypeSelected>false</yseop-yml:isUpperAlphaTypeSelected>
+                                <yseop-yml:isLowerRomanTypeSelected>false</yseop-yml:isLowerRomanTypeSelected>
+                                <yseop-yml:isUpperRomanTypeSelected>false</yseop-yml:isUpperRomanTypeSelected>
+                                <yseop-yml:firstLetterUpperCaseForEachBullet>_NEVER</yseop-yml:firstLetterUpperCaseForEachBullet>
+                                <yseop-yml:endOfItemSuffixNothingSelected>true</yseop-yml:endOfItemSuffixNothingSelected>
+                                <yseop-yml:endOfItemSuffixOtherText/>
+                                <yseop-yml:endOfLastItemSuffixNothingSelected>true</yseop-yml:endOfLastItemSuffixNothingSelected>
+                                <yseop-yml:endOfLastItemSuffixOtherText/>
+                            </yseop-yml:bulletListGeneralOptions>
+                            <yseop-yml:beginEndWithOptions>
+                                <yseop-yml:generalBeginWithText>Les 5 fromages les plus vendus à Paris sont : </yseop-yml:generalBeginWithText>
+                                <yseop-yml:generalEndWithText/>
+                                <yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemBeginWithSpecificText/>
+                                <yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemEndWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalBeginWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalEndWithSpecificText/>
+                                <yseop-yml:noItemGenerateNothingSelected>true</yseop-yml:noItemGenerateNothingSelected>
+                                <yseop-yml:noItemSentenceText/>
+                                <yseop-yml:inGeneralBulletBeginSameAsListSelected>true</yseop-yml:inGeneralBulletBeginSameAsListSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificSelected>false</yseop-yml:inGeneralBulletBeginSpecificSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificText/>
+                                <yseop-yml:inGeneralBulletEndSameAsListSelected>true</yseop-yml:inGeneralBulletEndSameAsListSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificSelected>false</yseop-yml:inGeneralBulletEndSpecificSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificText/>
+                            </yseop-yml:beginEndWithOptions>
+                            <yseop-yml:limitSizeOptions>
+                                <yseop-yml:noLimitSelected>true</yseop-yml:noLimitSelected>
+                                <yseop-yml:onlyFirstElementsSelected>true</yseop-yml:onlyFirstElementsSelected>
+                                <yseop-yml:onlyFirstElementsNumberValue>3</yseop-yml:onlyFirstElementsNumberValue>
+                                <yseop-yml:sentenceSizeTypeValue>30</yseop-yml:sentenceSizeTypeValue>
+                                <yseop-yml:limitByTypeValue>words</yseop-yml:limitByTypeValue>
+                                <yseop-yml:limitByTypeNumber>0</yseop-yml:limitByTypeNumber>
+                                <yseop-yml:sentenceEndEtcSelected>true</yseop-yml:sentenceEndEtcSelected>
+                                <yseop-yml:sentenceEndOtherText/>
+                            </yseop-yml:limitSizeOptions>
+                        </yseop-yml:bulletLinkAssembly>
+                    </yseop-yml:inline-assemblies>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2012-10-04T21:06:47.281Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="048fcf5f-6a90-4edd-a538-7ee3468790fd">
+            <yseop-yml:property identifier="048fcf5f-6a90-4edd-a538-7ee3468790fd|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:functionParameters>
+        <yseop-yml:parameters/>
+    </yseop-yml:functionParameters>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name>finalDocument</yseop-yml:name>
+    <yseop-yml:creationDate>2012-10-04T21:06:47.076Z</yseop-yml:creationDate>
+    <yseop-yml:properties identifier="9becc28f-c601-4ee4-a988-1d1d619b6f81">
+        <yseop-yml:property identifier="9becc28f-c601-4ee4-a988-1d1d619b6f81|dsl" type="YML_PROPERTY" name="dsl">"result"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

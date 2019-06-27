@@ -1,0 +1,7 @@
+Product PRODUCT_AMERICAN
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "American"
+        --> number SINGULAR
+    ;
+;

@@ -1,0 +1,7 @@
+Store STORE_DELUXE_CHEESE_STORE
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Deluxe Cheese Store"
+        --> number SINGULAR
+    ;
+;

@@ -1,0 +1,151 @@
+interface LibCube:Fact
+    field members
+        --> domains LibCube:Member
+        --> documentation "The dimensions to which the fact belongs"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> multivalued true
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "member"
+            --> number PLURAL
+            --> hasDeterminer true				
+        ;
+    field factMeasures
+        --> domains LibCube:FactMeasure
+        --> documentation "The measures of the fact (i.e. the value, rate of return, etc).  Measures should not include any differences as they can be easily calculated with LibCube:TwoFactsOneMeasureComparison."
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> multivalued true
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "fact measure"
+            --> number PLURAL
+            --> hasDeterminer true				
+        ;
+    field timeMember
+        --> domains LibCube:TimeMember
+        --> documentation "The time member to which the fact belongs.  Will be calculated  using included Jointure"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "time member"
+            --> number SINGULAR
+            --> hasDeterminer true			
+        ;
+    field isCurrentTime
+        --> domains Boolean
+        --> documentation "true or null.  Will be calculated  using included Jointure"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "is current time"
+            --> number SINGULAR
+            --> hasDeterminer false			
+        ;		
+		
+		
+    field sortField
+        --> domains Object        
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "sort field"
+            --> number SINGULAR
+        ;                      
+	                	                              
+	method getDimension(LibCube:Dimension theDimension)
+		--> domains LibCube:Member
+    --> documentation "A method to get the member of a Dimension of the Fact by ID"
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "{1} of {0}"
+            --> number PLURAL
+            --> hasDeterminer false
+        ;	
+	method getMeasure(LibCube:Measure theMeasure)
+    --> documentation "A method to get the Measure of the Fact by ID"
+		--> domains LibCube:FactMeasure
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "{1} of {0}"
+            --> number PLURAL
+            --> hasDeterminer false
+        ;
+	method getDate()
+    --> documentation "A method used to get the Date of the Fact"
+		--> domains Date
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "date of {0}"
+            --> number SINGULAR
+            --> hasDeterminer false
+        ;    
+        
+    method checkDimensions()
+    --> domains Void
+           
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Cube Fact"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:Fact
+    --> dynamicAttributesSize 10000
+;
+
+function LibCube:Fact::getDimension(LibCube:Dimension theDimension)
+--> return intersection(this>>members, theDimension>>members).get(_FIRST)
+;
+
+function LibCube:Fact::getMeasure(LibCube:Measure theMeasure)
+--> local Collection foundMeasures
+--> action {
+    foundMeasures = applyCollection(this>>factMeasures, __where currentElement.measure == theMeasure).toList();
+
+    if(foundMeasures.isEmpty() == true){
+        return null;
+    }
+    if(foundMeasures.size() == 1){
+        return foundMeasures.get(_FIRST);
+    }
+    if(foundMeasures.size() > 1){
+        return foundMeasures.get(_FIRST);
+        logWarning("Repeated measure: ", theMeasure.label, " on the fact: ", this);
+    }
+}
+;
+
+function LibCube:Fact::getDate()
+--> return this.getDimension(DIMENSION_TIME).date
+;
+
+function LibCube:Fact::checkDimensions()
+--> local HashMap hashMapByDimension
+--> action {
+  //check fact dimensions
+  hashMapByDimension = this>>members.groupItems (_KEY: LibCube:Member::dimension,
+                                                  _OCCURRENCES_COUNT, 
+                                                  _FREQUENCY_ORDER, 
+                                                  _DESCENDANT);
+  
+  foreach(_dimension, LibCube:Dimension) {
+    switch {
+      case(hashMapByDimension[_dimension] == null && _dimension.isOptional == false): {
+        if(_dimension.defaultMember != null) {
+          // add a defualtMember to this 
+          this.members := _dimension.defaultMember;
+        } else {
+          logWarning("missing dimension :", _dimension, " for fact :", this)
+        }              
+      }
+      case(hashMapByDimension[_dimension] > 1): {
+        logWarning("too many members for dimension :", _dimension, " for fact :", this)
+      }
+    }          
+  }  // end check dimensions
+
+  free(hashMapByDimension);
+}
+;

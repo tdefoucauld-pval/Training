@@ -1,0 +1,7 @@
+Store STORE_CAPITAL_CHEESE_STORE
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Capital Cheese Store"
+        --> number SINGULAR
+    ;
+;

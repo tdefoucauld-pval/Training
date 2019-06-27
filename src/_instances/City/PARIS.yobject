@@ -1,0 +1,7 @@
+City CITY_PARIS
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Paris"
+        --> number SINGULAR
+    ;
+;

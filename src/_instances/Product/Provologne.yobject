@@ -1,0 +1,7 @@
+Product PRODUCT_PROVOLOGNE
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Provologne"
+        --> number SINGULAR
+    ;
+;

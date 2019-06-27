@@ -1,0 +1,125 @@
+interface GeneralData
+    field language
+        --> domains Language
+        --> dsl -> Textualization
+            --> language LANG_fr
+            --> root "langage"
+            --> number SINGULAR
+        ;
+    field cube
+        --> domains LibCube:Cube
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "Cube"
+            --> number SINGULAR
+        ;
+    field previousPeriod
+        --> domains LibCube:TimeMember
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "previousPeriod"
+            --> number SINGULAR
+        ;
+    field currentPeriod
+        --> domains LibCube:TimeMember
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "currentPeriod"
+            --> number SINGULAR
+        ;
+    field test
+        --> domains LibCube:Fact
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "test"
+            --> number SINGULAR
+        ;
+    field ccsGlobalSalePreviousYear
+        --> domains LibCube:Fact
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "ccsGlobalSalePreviousYear"
+            --> number SINGULAR
+        ;
+    field ccsAmericanSalePreviousYear
+        --> domains LibCube:Fact
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "ccsAmericanSalePreviousYear"
+            --> number SINGULAR
+        ;
+    field topSoldUnitsParisFact
+        --> domains LibCube:Fact
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "topSoldUnitsParisFact"
+            --> number SINGULAR
+        ;
+    field ccsMostSoldUnitsPercentage
+        --> domains Number
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "ccsMostSoldUnitsPercentage"
+            --> number SINGULAR
+        ;
+    field dcsGlobalSalePreviousYear
+        --> domains LibCube:Fact
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "dcsGlobalSalePreviousYear"
+            --> number SINGULAR
+        ;
+    field dcsProvologneSalePreviousYear
+        --> domains LibCube:Fact
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "dcsProvologneSalePreviousYear"
+            --> number SINGULAR
+        ;
+    field topSoldUnitsDCSFact
+        --> domains LibCube:Fact
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "topSoldUnitsDCSFact"
+            --> number SINGULAR
+        ;
+    field dcsMostSoldUnitsPercentage
+        --> domains Number
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "dcsMostSoldUnitsPercentage"
+            --> number SINGULAR
+        ;
+    field topProductParisFact
+        --> domains LibCube:Fact
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "topProductParisFact"
+            --> number SINGULAR
+        ;
+    field bottomProductParisFact
+        --> domains LibCube:Fact
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "bottomProductParisFact"
+            --> number SINGULAR
+        ;
+    field topProductParisSalesSorter
+        --> domains LibCube:FactsSorter
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "topProductParisSalesSorter"
+            --> number SINGULAR
+        ;
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "general data"
+        --> number PLURAL
+    ;
+;
+
+implementation GeneralData
+    --> hasAccessorFunction true
+;
+

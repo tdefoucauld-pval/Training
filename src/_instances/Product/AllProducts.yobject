@@ -1,0 +1,7 @@
+Product PRODUCT_ALL
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "All Products"
+        --> number PLURAL
+    ;
+;

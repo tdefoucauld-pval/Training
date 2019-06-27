@@ -1,0 +1,8 @@
+LibCube:Measure MEASURE_SOLD_UNITS
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Sold Units Measure"
+        --> number SINGULAR
+        --> hasDeterminer false
+    ;
+;

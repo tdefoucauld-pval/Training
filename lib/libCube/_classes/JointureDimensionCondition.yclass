@@ -1,0 +1,66 @@
+interface LibCube:JointureDimensionCondition
+    field dimension
+        --> domains LibCube:Dimension
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "dimension"
+            --> number SINGULAR
+        ;
+    field members
+        --> domains LibCube:Member
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> multivalued true
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "members"
+            --> number PLURAL
+        ;
+
+    field acceptsAnyMembers
+        --> domains Boolean
+        --> defaultValue false
+        --> documentation "Does the Jointure Condition accepts any member of the dimension? (excluding empty, there must be at least 1 member)"
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "accepts any members?"
+            --> number PLURAL
+        ;
+
+    field setItselfAsValue
+        --> domains Boolean
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "set itself as value"
+            --> number PLURAL
+        ;         
+    field membersCollection
+        --> domainsLevel2 LibCube:Member
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "members collection"
+            --> number PLURAL
+        ; 
+    field OAV_value
+        --> domains Attribute
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "oav value"
+            --> number SINGULAR
+        ;        
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Cube Jointure Dimension condition"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:JointureDimensionCondition
+;

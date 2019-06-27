@@ -1,0 +1,132 @@
+interface LibCube:TwoFactsOneMeasureComparison
+    field comparedFact
+        --> domains LibCube:Fact
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "compared (new) fact"
+            --> number SINGULAR
+        ;
+    field comparingFact
+        --> domains LibCube:Fact
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "comparing (old) fact"
+            --> number SINGULAR
+        ;
+    field measure
+        --> domains LibCube:Measure
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "measure"
+            --> number SINGULAR
+        ;
+    field previousValue
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "previous value"
+            --> number SINGULAR
+        ;
+    field newValue
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "new value"
+            --> number SINGULAR
+        ;
+    field difference
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "difference"
+            --> number SINGULAR
+        ;
+    field absDiff
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "absolute difference"
+            --> number SINGULAR
+        ;
+    field pctChange
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "percentage change of {0}"
+            --> number SINGULAR
+        ;
+    field absPctChange
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "absolute percentage change"
+            --> number SINGULAR
+        ;
+    field pctDiff
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "percentage difference"
+            --> number SINGULAR
+        ;      
+
+    method compute()
+    --> domains Void        
+        
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "two facts / one measure comparison"
+        --> number SINGULAR
+        --> hasDeterminer true
+    ;
+    --> documentation "This class is used for calculating the difference between facts from two time periods. This ideal for sentences that read 'x grew by y%'."
+;
+
+implementation LibCube:TwoFactsOneMeasureComparison
+;
+
+
+
+
+function LibCube:TwoFactsOneMeasureComparison::compute()
+--> action {
+	newValue = comparedFact.getMeasure(measure).value;
+	previousValue = comparingFact.getMeasure(measure).value;
+	
+	difference = newValue - previousValue
+	absDiff = abs(difference)
+	
+	if (previousValue == 0) {
+		pctChange = 0;
+		//prevents division by 0
+	} else {
+		pctChange = (difference/abs(previousValue));		
+	}
+	
+	absPctChange = abs(pctChange);
+	
+  if ((newValue == 0 && previousValue == 0) || newValue == previousValue * -1) {
+    pctDiff = 0;
+    //prevents division by 0
+  } else {
+    pctDiff = abs(difference/((newValue + previousValue)/2));    
+  }
+}
+;
+
+
+
+
+
+

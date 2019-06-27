@@ -1,0 +1,115 @@
+interface LibCube:Cube
+    field dimensions
+        --> domains LibCube:Dimension
+        --> documentation "The dimensions of the cube. (i.e. time, hierarchies, etc)"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> multivalued true
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "dimensions"
+            --> number PLURAL
+        ;
+    field measures
+        --> domains LibCube:Measure
+        --> documentation "The measures of the cube.  Examples of measure include: rate of return, weight, etc."
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> multivalued true
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "measures"
+            --> number PLURAL
+        ;
+    field facts
+        --> domains LibCube:Fact
+        --> documentation "The facts of the cube. (in a excel spreadsheet, this would typically mean each individual value in a cell)"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> multivalued true
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "facts"
+            --> number PLURAL
+        ;
+    method calculateJointures()
+        --> domains Object 
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "calculate jointures"
+            --> number PLURAL
+        ;
+    
+    method initDimensions()
+        --> domains Void 
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "init dimensions"
+            --> number PLURAL
+        ;
+
+    method init()
+        --> domains Void 
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "init cube"
+            --> number PLURAL
+        ;
+        
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Cube"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:Cube
+;
+
+function LibCube:Cube::calculateJointures()
+--> action {
+  //Cube preparation
+
+   
+  DIMENSION_TIME_CURRENT_MEMBER = DIMENSION_TIME.getCurrentTimeMember()
+  foreach(_timeMember, LibCube:TimeMember) {
+    _timeMember.findQuarter()
+  }
+  
+  // Jointures preparation
+  foreach(_jointure , LibCube:Jointure) { 
+    _jointure.init()        
+    //_jointure.checkJointureDimensions()
+  }     
+    
+  // Loop through facts
+  foreach(_fact, this>>facts) {      
+    _fact.checkDimensions()
+      
+    foreach(_jointure , LibCube:Jointure) {    
+      _jointure.getJointureResult(_fact)
+    }
+  }
+     
+  foreach(_selection, LibCube:JointureFactsSelection) {
+    _selection.populateSelection()
+  }
+}
+;
+
+function LibCube:Cube::initDimensions()
+--> action {
+    foreach(_dimension, LibCube:Dimension) {
+        // add dimensions to cube (should be added to the lib configuration as a parameter default = true)
+        this.dimensions := _dimension;
+
+        //Loop through the hierarchies and add members to dimensions
+        _dimension.processDimension()        
+    }
+}
+;
+
+function LibCube:Cube::init()
+--> action {
+    initDimensions();
+    calculateJointures();
+}
+;

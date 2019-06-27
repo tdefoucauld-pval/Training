@@ -1,0 +1,71 @@
+interface LibCube:Member
+    field dimension
+        --> domains LibCube:Dimension
+        --> documentation "The dimension to which the Member belongs"
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "dimension"
+            --> number SINGULAR
+        ;
+    field label
+        --> domains Text
+        --> documentation "The label of the member (i.e. what the member is called).  This field is the default text written by the toStringInStream function"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "label"
+            --> number SINGULAR
+        ;	
+    field toStringInStreamObject
+        --> domains Object
+        --> documentation "The toStringInStreamObject of the member (i.e. how the member should be written).  This field is the default text written by the toStringInStream function"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "label"
+            --> number SINGULAR
+        ;	        
+	
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Cube Member"
+        --> number SINGULAR
+    ;
+    --> trackInstances true
+    --> dynamicInstances  true 	
+;
+
+implementation LibCube:Member override {
+  toStringInStream function
+}
+;
+
+function LibCube:Member::toStringInStream({[_KEY]: Symbol mode {__nullable},} args)
+static {
+   NlgRepresentant    REPRESENTANT_THE_MEMBER
+       --> referential \(
+                          \setTextGranuleGender(MASCULINE) 
+                          \value(label) 
+                       \)
+       --> anaphor \(
+                      \setTextGranuleGender(MASCULINE) 
+                      \value(label) 
+                   \)
+   ;
+}
+--> action
+    {
+        if(this.toStringInStreamObject == null){
+            REPRESENTANT_THE_MEMBER.write (_REFERENT: this, args);
+        }else{
+
+            \(
+            \value(this.toStringInStreamObject, args)
+            \).write()
+           
+        }
+        
+    } 
+;

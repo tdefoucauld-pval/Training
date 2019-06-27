@@ -1,0 +1,45 @@
+interface LibCube:JointureFactsSelection
+    field jointure
+        --> domains LibCube:Jointure
+        --> documentation "A Jointure. The Jointure should collect facts which are store in the 'selected facts'"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "jointure"
+            --> number SINGULAR
+        ;
+        
+    field selectedFacts
+        --> domains LibCube:Fact
+        --> documentation "The facts collected by the Jointure"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> multivalued true
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "selected facts"
+            --> number PLURAL
+        ;
+
+    method populateSelection()
+    --> domains Void
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Jointure Facts Selection"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:JointureFactsSelection
+;
+
+function LibCube:JointureFactsSelection::populateSelection()
+--> local Collection theSelectedFacts
+--> action {  
+  theSelectedFacts = as(?fact, ?att = jointure.attribute, ?fact.?att != null)
+  foreach(_fact, theSelectedFacts) {
+    selectedFacts := _fact;
+  }
+}
+;

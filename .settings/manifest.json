@@ -1,0 +1,15 @@
+{
+  "displayName_en" : "Cheese company sales",
+  "displayName_fr" : "Cheese company sales",
+  "description_fr" : "Cheese company sales",
+  "description_en" : "Cheese company sales",
+  "name" : "CheeseCompanySales",
+  "date" : "2018-08-22",
+  "creator" : "tomcat",
+  "version" : "1.0.0",
+  "engineVersionCompatible" : "7.1.0.M2-001",
+  "dependencies" : [ ],
+  "simpleCustomSections" : [ ],
+  "complexCustomSections" : [ ],
+  "instanceEditorClasses" : [ ]
+}
