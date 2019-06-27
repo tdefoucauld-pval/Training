@@ -11,7 +11,7 @@
             </yseop-yml:granuleUnilingueContent>
             <yseop-yml:granuleUnilingueContent locale="en">
                 <yseop-yml:granuleContent>
-                    <yseop-yml:text/>
+                    <yseop-yml:text>Ecrire le texte entre les 2 balises</yseop-yml:text>
                     <yseop-yml:inline-assemblies/>
                     <yseop-yml:inline-dslFunctionCalls/>
                 </yseop-yml:granuleContent>
@@ -27,7 +27,7 @@
     <yseop-yml:localVariables/>
     <yseop-yml:advancedContent/>
     <yseop-yml:ymlParameters/>
-    <yseop-yml:name/>
+    <yseop-yml:name>Test5</yseop-yml:name>
     <yseop-yml:properties identifier="0aef3171-640e-47ce-a522-c7b7a6e68f9e">
         <yseop-yml:property identifier="0aef3171-640e-47ce-a522-c7b7a6e68f9e|dsl" type="YML_PROPERTY" name="dsl">"Test 5"</yseop-yml:property>
     </yseop-yml:properties>
