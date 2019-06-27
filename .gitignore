@@ -8,5 +8,6 @@
 /xmlBatch/output-inputTest.html
 *.yma
 *.ini
-
+/test/output
+/test/reports
 
