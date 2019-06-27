@@ -2,8 +2,9 @@
 /log
 .generated-yml
 *~
+/xmlBatch/output*
 /xmlBatch/outputTest.xml
-/xmlBatch/result.html
+/xmlBatch/result.xml
 /xmlBatch/output-inputTest.xml
 /xmlBatch/output-inputTest.html
 *.yma
