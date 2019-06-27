@@ -6,7 +6,6 @@
                 <yseop-yml:granuleContent>
                     <yseop-yml:text>
 \beginStyle(BOLD_STYLE)
-    Hello
     Résultat pour la ville de
     \value(theGeneralData.ccsGlobalSalePreviousYear.getDimension(DIMENSION_CITY).label)
     :
