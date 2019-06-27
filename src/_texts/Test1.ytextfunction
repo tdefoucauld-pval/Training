@@ -4,7 +4,7 @@
         <yseop-yml:granuleI18nContents>
             <yseop-yml:granuleUnilingueContent locale="fr">
                 <yseop-yml:granuleContent>
-                    <yseop-yml:text/>
+                    <yseop-yml:text>Test </yseop-yml:text>
                     <yseop-yml:inline-assemblies/>
                     <yseop-yml:inline-dslFunctionCalls/>
                 </yseop-yml:granuleContent>
@@ -27,7 +27,7 @@
     <yseop-yml:localVariables/>
     <yseop-yml:advancedContent/>
     <yseop-yml:ymlParameters/>
-    <yseop-yml:name/>
+    <yseop-yml:name>Test1</yseop-yml:name>
     <yseop-yml:properties identifier="f72840f9-4e2a-458f-bf76-fff1d0177c63">
         <yseop-yml:property identifier="f72840f9-4e2a-458f-bf76-fff1d0177c63|dsl" type="YML_PROPERTY" name="dsl">"Test 1"</yseop-yml:property>
     </yseop-yml:properties>
