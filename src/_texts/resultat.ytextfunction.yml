@@ -6,178 +6,178 @@ args {}
       --> i18nName_en -> TextGranule _texts:resultat_text__en
          \(
 
-\beginStyle(BOLD_STYLE)
-    Résultats pour la ville de
-    \value(theGeneralData.ccsGlobalSalePreviousYear.getDimension(DIMENSION_CITY).label)
-    :
-    \p()
-    magasin
-    \value(theGeneralData.ccsGlobalSalePreviousYear.getDimension(DIMENSION_STORE).label)
-    \p()
-\endStyle
+            \beginStyle(BOLD_STYLE)
+                Résultats pour la ville de
+                \value(theGeneralData.ccsGlobalSalePreviousYear.getDimension(DIMENSION_CITY).label)
+                :
+                \p()
+                magasin
+                \value(theGeneralData.ccsGlobalSalePreviousYear.getDimension(DIMENSION_STORE).label)
+                \p()
+            \endStyle
 
-En 2017,
-\value(theGeneralData.ccsGlobalSalePreviousYear.getMeasure(MEASURE_SOLD_UNITS).value)
-unités de fromage ont été vendues pour un total de
-\value(theGeneralData.ccsGlobalSalePreviousYear.getMeasure(MEASURE_SALE_VALUE).value)
-€.
-\endOfLine
-, le fromage
-\value(theGeneralData.ccsAmericanSalePreviousYear.getDimension(DIMENSION_PRODUCT).label)
-du type
-\value(theGeneralData.ccsAmericanSalePreviousYear.getDimension(DIMENSION_PRODUCT).parent.label)
-à été vendu à
-\value(theGeneralData.ccsAmericanSalePreviousYear.getMeasure(MEASURE_SOLD_UNITS).value)
-exemplaires pour un montant total de
-\value(theGeneralData.ccsAmericanSalePreviousYear.getMeasure(MEASURE_SALE_VALUE).value)
-€.
-\endOfLine
-Le fromage le plus vendu est le
-\value(theGeneralData.topSoldUnitsParisFact.getDimension(DIMENSION_PRODUCT).label)
-du type
-\value(theGeneralData.topSoldUnitsParisFact.getDimension(DIMENSION_PRODUCT).parent.label)
-avec
-\value(theGeneralData.topSoldUnitsParisFact.getMeasure(MEASURE_SOLD_UNITS).value)
-exemplaires pour un montant de
-\value(theGeneralData.topSoldUnitsParisFact.getMeasure(MEASURE_SALE_VALUE).value)
-€, soit
-\value(theGeneralData.ccsMostSoldUnitsPercentage, UNIT_PERCENT)
-des ventes totales du magasin.
-\p()
+            En 2017,
+            \value(theGeneralData.ccsGlobalSalePreviousYear.getMeasure(MEASURE_SOLD_UNITS).value)
+            unités de fromage ont été vendues pour un total de
+            \value(theGeneralData.ccsGlobalSalePreviousYear.getMeasure(MEASURE_SALE_VALUE).value)
+            €.
+            \endOfLine
+            , le fromage
+            \value(theGeneralData.ccsAmericanSalePreviousYear.getDimension(DIMENSION_PRODUCT).label)
+            du type
+            \value(theGeneralData.ccsAmericanSalePreviousYear.getDimension(DIMENSION_PRODUCT).parent.label)
+            à été vendu à
+            \value(theGeneralData.ccsAmericanSalePreviousYear.getMeasure(MEASURE_SOLD_UNITS).value)
+            exemplaires pour un montant total de
+            \value(theGeneralData.ccsAmericanSalePreviousYear.getMeasure(MEASURE_SALE_VALUE).value)
+            €.
+            \endOfLine
+            Le fromage le plus vendu est le
+            \value(theGeneralData.topSoldUnitsParisFact.getDimension(DIMENSION_PRODUCT).label)
+            du type
+            \value(theGeneralData.topSoldUnitsParisFact.getDimension(DIMENSION_PRODUCT).parent.label)
+            avec
+            \value(theGeneralData.topSoldUnitsParisFact.getMeasure(MEASURE_SOLD_UNITS).value)
+            exemplaires pour un montant de
+            \value(theGeneralData.topSoldUnitsParisFact.getMeasure(MEASURE_SALE_VALUE).value)
+            €, soit
+            \value(theGeneralData.ccsMostSoldUnitsPercentage, UNIT_PERCENT)
+            des ventes totales du magasin.
+            \p()
 
-\beginStyle(BOLD_STYLE)
-    magasin
-    \value(theGeneralData.dcsGlobalSalePreviousYear.getDimension(DIMENSION_STORE).label)
-    \p()
-\endStyle
+            \beginStyle(BOLD_STYLE)
+                magasin
+                \value(theGeneralData.dcsGlobalSalePreviousYear.getDimension(DIMENSION_STORE).label)
+                \p()
+            \endStyle
 
-En 2017,
-\value(theGeneralData.dcsGlobalSalePreviousYear.getMeasure(MEASURE_SOLD_UNITS).value)
-unités de fromage ont été vendues pour un total de
-\value(theGeneralData.dcsGlobalSalePreviousYear.getMeasure(MEASURE_SALE_VALUE).value)
-€.
-\endOfLine
-, le fromage
-\value(theGeneralData.dcsProvologneSalePreviousYear.getDimension(DIMENSION_PRODUCT).label)
-du type
-\value(theGeneralData.dcsProvologneSalePreviousYear.getDimension(DIMENSION_PRODUCT).parent.label)
-à été vendu à
-\value(theGeneralData.dcsProvologneSalePreviousYear.getMeasure(MEASURE_SOLD_UNITS).value)
-exemplaires pour un montant total de
-\value(theGeneralData.dcsProvologneSalePreviousYear.getMeasure(MEASURE_SALE_VALUE).value)
-€.
-\endOfLine
-Le fromage le plus vendu est le
-\value(theGeneralData.topSoldUnitsDCSFact.getDimension(DIMENSION_PRODUCT).label)
-du type
-\value(theGeneralData.topSoldUnitsDCSFact.getDimension(DIMENSION_PRODUCT).parent.label)
-avec
-\value(theGeneralData.topSoldUnitsDCSFact.getMeasure(MEASURE_SOLD_UNITS).value)
-exemplaires pour un montant de
-\value(theGeneralData.topSoldUnitsDCSFact.getMeasure(MEASURE_SALE_VALUE).value)
-€, soit
-\value(theGeneralData.dcsMostSoldUnitsPercentage, UNIT_PERCENT)
-des ventes totales du magasin.
-\p()
-Au total pour la ville de
-\value(theGeneralData.topProductParisFact.getDimension(DIMENSION_CITY).label)
-, le fromage le plus vendu est le
-\value(theGeneralData.topProductParisFact.getDimension(DIMENSION_PRODUCT).label)
-du type
-\value(theGeneralData.topProductParisFact.getDimension(DIMENSION_PRODUCT).parent.label)
-avec
-\value(theGeneralData.topProductParisFact.getMeasure(MEASURE_SOLD_UNITS).value)
-exemplaires pour une valeur de
-\value(theGeneralData.topProductParisFact.getMeasure(MEASURE_SALE_VALUE).value)
-€. Le fromage le moins vendu est le
-\value(theGeneralData.bottomProductParisFact.getDimension(DIMENSION_PRODUCT).label)
-du type
-\value(theGeneralData.bottomProductParisFact.getDimension(DIMENSION_PRODUCT).parent.label)
-avec
-\value(theGeneralData.bottomProductParisFact.getMeasure(MEASURE_SOLD_UNITS).value)
-exemplaires pour une valeur de
-\value(theGeneralData.bottomProductParisFact.getMeasure(MEASURE_SALE_VALUE).value)
-€.
-\p()
+            En 2017,
+            \value(theGeneralData.dcsGlobalSalePreviousYear.getMeasure(MEASURE_SOLD_UNITS).value)
+            unités de fromage ont été vendues pour un total de
+            \value(theGeneralData.dcsGlobalSalePreviousYear.getMeasure(MEASURE_SALE_VALUE).value)
+            €.
+            \endOfLine
+            , le fromage
+            \value(theGeneralData.dcsProvologneSalePreviousYear.getDimension(DIMENSION_PRODUCT).label)
+            du type
+            \value(theGeneralData.dcsProvologneSalePreviousYear.getDimension(DIMENSION_PRODUCT).parent.label)
+            à été vendu à
+            \value(theGeneralData.dcsProvologneSalePreviousYear.getMeasure(MEASURE_SOLD_UNITS).value)
+            exemplaires pour un montant total de
+            \value(theGeneralData.dcsProvologneSalePreviousYear.getMeasure(MEASURE_SALE_VALUE).value)
+            €.
+            \endOfLine
+            Le fromage le plus vendu est le
+            \value(theGeneralData.topSoldUnitsDCSFact.getDimension(DIMENSION_PRODUCT).label)
+            du type
+            \value(theGeneralData.topSoldUnitsDCSFact.getDimension(DIMENSION_PRODUCT).parent.label)
+            avec
+            \value(theGeneralData.topSoldUnitsDCSFact.getMeasure(MEASURE_SOLD_UNITS).value)
+            exemplaires pour un montant de
+            \value(theGeneralData.topSoldUnitsDCSFact.getMeasure(MEASURE_SALE_VALUE).value)
+            €, soit
+            \value(theGeneralData.dcsMostSoldUnitsPercentage, UNIT_PERCENT)
+            des ventes totales du magasin.
+            \p()
+            Au total pour la ville de
+            \value(theGeneralData.topProductParisFact.getDimension(DIMENSION_CITY).label)
+            , le fromage le plus vendu est le
+            \value(theGeneralData.topProductParisFact.getDimension(DIMENSION_PRODUCT).label)
+            du type
+            \value(theGeneralData.topProductParisFact.getDimension(DIMENSION_PRODUCT).parent.label)
+            avec
+            \value(theGeneralData.topProductParisFact.getMeasure(MEASURE_SOLD_UNITS).value)
+            exemplaires pour une valeur de
+            \value(theGeneralData.topProductParisFact.getMeasure(MEASURE_SALE_VALUE).value)
+            €. Le fromage le moins vendu est le
+            \value(theGeneralData.bottomProductParisFact.getDimension(DIMENSION_PRODUCT).label)
+            du type
+            \value(theGeneralData.bottomProductParisFact.getDimension(DIMENSION_PRODUCT).parent.label)
+            avec
+            \value(theGeneralData.bottomProductParisFact.getMeasure(MEASURE_SOLD_UNITS).value)
+            exemplaires pour une valeur de
+            \value(theGeneralData.bottomProductParisFact.getMeasure(MEASURE_SALE_VALUE).value)
+            €.
+            \p()
 
-\foreach(_libCube:Fact, theGeneralData.topProductParisSalesFacts, 
-// SrcGenerator : 04/07/19 09:53
--> TextListAssembly
-   --> mode _COMPOSE_BULLETS
-   --> bulletAssembly -> TextListBulletAssembly
-      --> numberedList true
-      --> numberingType _ARABIC_NUMBERING
-      --> startNewSentenceAfterBullet _NEVER
-      --> lineDefaultSuffix \(\)
-      --> lastLineSuffix \(\)
-      --> listStart  {
-         _IF_COUNT_OF_ITEMS,0,\(\),\(La liste des 5 fromages les plus vendus à Paris est la suivante :
-\)
-        }
-      
-      --> listEnd  {
-         _IF_COUNT_OF_ITEMS,0,\(\),\(\)
-        }
-      
-      --> usingThreshold 1
-      ;
-   ;
-)
-    Le fromage
-    \value(_libCube:Fact.getDimension(DIMENSION_PRODUCT).label)
-    avec un total de
-    \value(_libCube:Fact.getMeasure(MEASURE_SALE_VALUE).value)
-    €.
+            \foreach(_libCube:Fact, theGeneralData.topProductParisSalesFacts, 
+            // SrcGenerator : 04/07/19 09:53
+            -> TextListAssembly
+            --> mode _COMPOSE_BULLETS
+            --> bulletAssembly -> TextListBulletAssembly
+                --> numberedList true
+                --> numberingType _ARABIC_NUMBERING
+                --> startNewSentenceAfterBullet _NEVER
+                --> lineDefaultSuffix \(\)
+                --> lastLineSuffix \(\)
+                --> listStart  {
+                    _IF_COUNT_OF_ITEMS,0,\(\),\(La liste des 5 fromages les plus vendus à Paris est la suivante :
+            \)
+                    }
+                
+                --> listEnd  {
+                    _IF_COUNT_OF_ITEMS,0,\(\),\(\)
+                    }
+                
+                --> usingThreshold 1
+                ;
+            ;
+            )
+                Le fromage
+                \value(_libCube:Fact.getDimension(DIMENSION_PRODUCT).label)
+                avec un total de
+                \value(_libCube:Fact.getMeasure(MEASURE_SALE_VALUE).value)
+                €.
 
-\endForeach
+            \endForeach
 
-\p()
-\p()
+            \p()
+            \p()
 
-\beginStyle(BOLD_STYLE)
-    Résultats pour la ville de
-    \value(CITY_NEW_YORK)
-    :
-    \p()
-\endStyle
+            \beginStyle(BOLD_STYLE)
+                Résultats pour la ville de
+                \value(CITY_NEW_YORK)
+                :
+                \p()
+            \endStyle
 
 
-\foreach(_libCube:Fact, theGeneralData.nyGlobalSalePreviousYear, 
-// SrcGenerator : 04/07/19 09:53
--> TextListAssembly
-   --> mode _COMPOSE_BULLETS
-   --> bulletAssembly -> TextListBulletAssembly
-      --> startNewSentenceAfterBullet _NEVER
-      --> lineDefaultSuffix \(\)
-      --> lastLineSuffix \(\)
-      --> listStart  {
-         _IF_COUNT_OF_ITEMS,0,\(\),\(\)
-        }
-      
-      --> listEnd  {
-         _IF_COUNT_OF_ITEMS,0,\(\),\(\)
-        }
-      
-      --> usingThreshold 1
-      ;
-   ;
-)
+            \foreach(_libCube:Fact, theGeneralData.nyGlobalSalePreviousYear, 
+            // SrcGenerator : 04/07/19 09:53
+            -> TextListAssembly
+            --> mode _COMPOSE_BULLETS
+            --> bulletAssembly -> TextListBulletAssembly
+                --> startNewSentenceAfterBullet _NEVER
+                --> lineDefaultSuffix \(\)
+                --> lastLineSuffix \(\)
+                --> listStart  {
+                    _IF_COUNT_OF_ITEMS,0,\(\),\(\)
+                    }
+                
+                --> listEnd  {
+                    _IF_COUNT_OF_ITEMS,0,\(\),\(\)
+                    }
+                
+                --> usingThreshold 1
+                ;
+            ;
+            )
 
-    \beginStyle(BOLD_STYLE)
-        Magasin
-        \value(_libCube:Fact.getDimension(DIMENSION_STORE).label)
-    \endStyle
-    \p()
-    En 2017,
-    \value(_libCube:Fact.getMeasure(MEASURE_SOLD_UNITS).value)
-    unités de fromage ont été vendues pour un total de
-    \value(_libCube:Fact.getMeasure(MEASURE_SALE_VALUE).value)
-    €.
-    \p()
+                \beginStyle(BOLD_STYLE)
+                    Magasin
+                    \value(_libCube:Fact.getDimension(DIMENSION_STORE).label)
+                \endStyle
+                \p()
+                En 2017,
+                \value(_libCube:Fact.getMeasure(MEASURE_SOLD_UNITS).value)
+                unités de fromage ont été vendues pour un total de
+                \value(_libCube:Fact.getMeasure(MEASURE_SALE_VALUE).value)
+                €.
+                \p()
 
-\endForeach
+            \endForeach
 
-\);
+        \);
       ;
    --> dsl "resultat"
    ;

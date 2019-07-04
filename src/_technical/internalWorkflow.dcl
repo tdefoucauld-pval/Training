@@ -71,7 +71,10 @@ complete REQUEST_MANAGER
 		--> xmlAttributes	["id", "finalDocument", "index", 1, "name", "text1"]
 		--> text			-> TextMail
 		
-							--> components	{_texts:finalDocument}
+							--> components	{
+								_texts:resultat,
+								_texts:Test1
+								}
 	
 							--> mailData	-> MailData
 											--> date Date..current()

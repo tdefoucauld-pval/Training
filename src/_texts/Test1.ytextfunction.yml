@@ -9,10 +9,10 @@ args {}
                     
                     
                     Ecrire le texte entre les 2 balises
-                    hahaha
                     
                     
-\);
+                    
+         \);
       ;
    --> dsl "Test 1"
    ;
