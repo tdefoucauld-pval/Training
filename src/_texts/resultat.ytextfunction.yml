@@ -6,15 +6,15 @@ args {}
       --> i18nName_en -> TextGranule _texts:resultat_text__en
          \(
 
-            \beginStyle(BOLD_STYLE)
-                Résultats pour la ville de
-                \value(theGeneralData.ccsGlobalSalePreviousYear.getDimension(DIMENSION_CITY).label)
-                :
-                \p()
-                magasin
-                \value(theGeneralData.ccsGlobalSalePreviousYear.getDimension(DIMENSION_STORE).label)
-                \p()
-            \endStyle
+            // \beginStyle(BOLD_STYLE)
+            //     Résultats pour la ville de
+            //     \value(theGeneralData.ccsGlobalSalePreviousYear.getDimension(DIMENSION_CITY).label)
+            //     :
+            //     \p()
+            //     magasin
+            //     \value(theGeneralData.ccsGlobalSalePreviousYear.getDimension(DIMENSION_STORE).label)
+            //     \p()
+            // \endStyle
 
             En 2017,
             \value(theGeneralData.ccsGlobalSalePreviousYear.getMeasure(MEASURE_SOLD_UNITS).value)
