@@ -1,0 +1,25 @@
+// SrcGenerator : 04/07/19 09:53
+extern Function _businessRules:myBusinessRules
+args {}
+ ;
+extern TextFunction _texts:Test1
+args {}
+ ;
+extern TextFunction _texts:Test2
+args {}
+ ;
+extern TextFunction _texts:Test3
+args {}
+ ;
+extern TextFunction _texts:Test4
+args {}
+ ;
+extern TextFunction _texts:Test5
+args {}
+ ;
+extern TextFunction _texts:finalDocument
+args {}
+ ;
+extern TextFunction _texts:resultat
+args {}
+ ;

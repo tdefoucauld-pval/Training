@@ -1,0 +1,18 @@
+// SrcGenerator : 04/07/19 09:53
+TextFunction _texts:Test5
+args {}
+
+   --> text -> MultilingualText _texts:Test5_text
+      --> i18nName_en -> TextGranule _texts:Test5_text__en
+         \(
+
+                    
+                    
+                    Ecrire le texte entre les 2 balises
+                    
+                    
+                    
+\);
+      ;
+   --> dsl "Test 5"
+   ;

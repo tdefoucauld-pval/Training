@@ -1,0 +1,6 @@
+// SrcGenerator : 04/07/19 09:53
+Function _businessRules:myBusinessRules
+args {}
+
+   --> dsl "my business rules"
+   ;
