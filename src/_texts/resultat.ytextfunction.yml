@@ -4,7 +4,7 @@ args {}
 
    --> text -> MultilingualText _texts:resultat_text
       --> i18nName_en -> TextGranule _texts:resultat_text__en
-         \(
+         \( // Le Text Granule commence ici  
 
             \beginStyle(BOLD_STYLE)
                 Résultats pour la ville de
@@ -176,7 +176,7 @@ args {}
                 \p()
 
             \endForeach
-
+            // Et termine ici, donc écrivez dedans    
         \);
       ;
    --> dsl "resultat"
