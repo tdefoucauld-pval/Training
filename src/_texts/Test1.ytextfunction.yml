@@ -4,14 +4,17 @@ args {}
 
    --> text -> MultilingualText _texts:Test1_text
       --> i18nName_en -> TextGranule _texts:Test1_text__en
-         \(
-
+         \( // Le Text Granule commence ici    
+            \beginStyle(BOLD_STYLE)
+                Résultats de Test 1
+                \p()
+            \endStyle
                     
+                 
+            
+                  
                     
-                    Ecrire le texte entre les 2 balises
-                    
-                    
-                    
+            // Et termine ici, donc écrivez dedans        
          \);
       ;
    --> dsl "Test 1"
