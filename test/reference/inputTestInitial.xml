@@ -3,11 +3,149 @@
 <y:output xmlns:y="http://www.yseop.com/engine/3" xmlns:yt="http://www.yseop.com/text/2" xmlns:yd="http://www.yseop.com/dialog/1" xmlns:yd-b="http://www.yseop.com/dialog/binding/1" xmlns:i18n="http://apache.org/cocoon/i18n/2.1" xmlns:fd="http://apache.org/cocoon/forms/1.0#definition" xmlns:ft="http://apache.org/cocoon/forms/1.0#template" xmlns:fi="http://apache.org/cocoon/forms/1.0#instance" xmlns:fb="http://apache.org/cocoon/forms/1.0#binding">
 	<y:results>
 		<y:texts>
-			<y:txt id="finalDocument" index="1" name="text1" format="xml-dialect"><yt:bold>Résultats pour la ville de Paris:<yt:par/>Magasin Capital Cheese Store</yt:bold><yt:par/>En 2017, 4109 unités de fromage ont été vendues pour un total de 39279.89 €.<yt:line/>Le fromage American du type Processed Cheese à été vendu à 486 exemplaires pour un montant total de 3717.9 €.<yt:line/>Le fromage le plus vendu est le Cheddar du type Semi Hard Cheese avec 854 exemplaires pour un montant de 10307.78 €, soit 26.24% des ventes totales du magasin.<yt:par/><yt:bold>Magasin Deluxe Cheese Store<yt:par/></yt:bold>En 2017, 3087 unités de fromage ont été vendues pour un total de 37486.23 €.<yt:line/>Le fromage Provologne du type Processed Cheese à été vendu à 365 exemplaires pour un montant total de 3441.95 €.<yt:line/>Le fromage le plus vendu est le Buffalo du type Fresh Cheese avec 635 exemplaires pour un montant de 8591.55 €, soit 22.92% des ventes totales du magasin.<yt:par/>Au total pour la ville de Paris, le fromage le plus vendu est le Buffalo du type Fresh Cheese avec 1620 exemplaires pour une valeur de 18382.45 €. Le fromage le moins vendu est le Costeño du type Fresh Cheese avec 374 exemplaires pour une valeur de 3803.41 €.<yt:par/>La liste des 5 fromages les plus vendus à Paris est la suivante: 
-				<yt:enum numbering="decimal"><yt:item>Le fromage Buffalo avec un total de 18382.45 €.</yt:item> <yt:item>Le fromage Cheddar avec un total de 16675.06 €.</yt:item> <yt:item>Le fromage Provologne avec un total de 11531.63 €.</yt:item> <yt:item>Le fromage Swiss avec un total de 8330 €.</yt:item> <yt:item>Le fromage American avec un total de 7389.36 €.</yt:item>
-				</yt:enum><yt:par/><yt:par/><yt:bold>Résultats pour la ville de New York:<yt:par/></yt:bold>
-				<yt:enum numbering="bullet"><yt:item><yt:bold>Magasin American Special Cheeses</yt:bold><yt:par/>En 2017, 3144 unités de fromage ont été vendues pour un total de 35852.64 €.<yt:par/></yt:item><yt:item><yt:bold>Magasin Cheese For All</yt:bold><yt:par/>En 2017, 4427 unités de fromage ont été vendues pour un total de 45756.05 €.<yt:par/></yt:item>
-				</yt:enum> And <yt:bold>Résultats de Test 1</yt:bold><yt:par/>
+			<y:txt id="finalDocument" index="1" name="text1" format="xml-dialect"><yt:text-eval
+	yid="0x2F4A"
+	class="TextMail"
+	success="true"
+	id-write="2"
+	src-file="_technical/internalWorkflow.dcl"
+	src-line="74"
+><yt:text-eval
+	yid="_texts:resultat"
+	class="TextFunction"
+	dsl="resultat"
+	success="true"
+	id-write="7"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="2"
+><yt:text-eval
+	yid="_texts:resultat_text"
+	class="MultilingualText"
+	success="true"
+	id-write="8"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="5"
+><yt:text-eval
+	yid="_texts:resultat_text__en"
+	class="TextGranule"
+	success="true"
+	id-write="9"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="6"
+><yt:bold>Résultats pour la ville de Paris:<yt:par/>Magasin Capital Cheese Store</yt:bold><yt:par/>En 2017, 4109 unités de fromage ont été vendues pour un total de 39279.89 €.<yt:line/>Le fromage American du type Processed Cheese à été vendu à 486 exemplaires pour un montant total de 3717.9 €.<yt:line/>Le fromage le plus vendu est le Cheddar du type Semi Hard Cheese avec 854 exemplaires pour un montant de 10307.78 €, soit 26.24% des ventes totales du magasin.<yt:par/><yt:bold>Magasin Deluxe Cheese Store<yt:par/></yt:bold>En 2017, 3087 unités de fromage ont été vendues pour un total de 37486.23 €.<yt:line/>Le fromage Provologne du type Processed Cheese à été vendu à 365 exemplaires pour un montant total de 3441.95 €.<yt:line/>Le fromage le plus vendu est le Buffalo du type Fresh Cheese avec 635 exemplaires pour un montant de 8591.55 €, soit 22.92% des ventes totales du magasin.<yt:par/>Au total pour la ville de Paris, le fromage le plus vendu est le Buffalo du type Fresh Cheese avec 1620 exemplaires pour une valeur de 18382.45 €. Le fromage le moins vendu est le Costeño du type Fresh Cheese avec 374 exemplaires pour une valeur de 3803.41 €.<yt:par/><yt:text-eval
+	yid="0x35BD"
+	class="TextGranule"
+	success="true"
+	id-write="48"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="114"
+>La liste des 5 fromages les plus vendus à Paris est la suivante:</yt:text-eval> <yt:enum numbering="decimal"><yt:item>Le fromage Buffalo avec un total de 18382.45 €. <yt:text-eval
+	yid="0x35BA"
+	class="TextGranule"
+	success="true"
+	id-write="52"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="111"
+></yt:text-eval></yt:item><yt:item>Le fromage Cheddar avec un total de 16675.06 €. <yt:text-eval
+	yid="0x35BA"
+	class="TextGranule"
+	success="true"
+	id-write="56"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="111"
+></yt:text-eval></yt:item><yt:item>Le fromage Provologne avec un total de 11531.63 €. <yt:text-eval
+	yid="0x35BA"
+	class="TextGranule"
+	success="true"
+	id-write="60"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="111"
+></yt:text-eval></yt:item><yt:item>Le fromage Swiss avec un total de 8330 €. <yt:text-eval
+	yid="0x35BA"
+	class="TextGranule"
+	success="true"
+	id-write="64"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="111"
+></yt:text-eval></yt:item><yt:item>Le fromage American avec un total de 7389.36 €. <yt:text-eval
+	yid="0x35BB"
+	class="TextGranule"
+	success="true"
+	id-write="68"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="112"
+></yt:text-eval></yt:item></yt:enum><yt:text-eval
+	yid="0x35C0"
+	class="TextGranule"
+	success="true"
+	id-write="70"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="119"
+></yt:text-eval><yt:par/><yt:par/><yt:bold>Résultats pour la ville de <yt:text-eval
+	yid="REPRESENTANT_THE_MEMBER"
+	class="NlgRepresentant"
+	success="true"
+	id-write="72"
+	src-file="C:/yseop/projects/Training/lib/libCube/_classes/Member.yclass"
+	src-line="46"
+><yt:text-eval
+	yid="0x308D"
+	class="TextGranule"
+	success="true"
+	id-write="73"
+	src-file="C:/yseop/projects/Training/lib/libCube/_classes/Member.yclass"
+	src-line="47"
+>New York</yt:text-eval></yt:text-eval>:<yt:par/></yt:bold><yt:text-eval
+	yid="0x35CF"
+	class="TextGranule"
+	success="true"
+	id-write="75"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="154"
+></yt:text-eval><yt:enum numbering="bullet"><yt:item><yt:bold>Magasin American Special Cheeses</yt:bold><yt:par/>En 2017, 3144 unités de fromage ont été vendues pour un total de 35852.64 €.<yt:par/><yt:text-eval
+	yid="0x35CC"
+	class="TextGranule"
+	success="true"
+	id-write="81"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="151"
+></yt:text-eval></yt:item><yt:item><yt:bold>Magasin Cheese For All</yt:bold><yt:par/>En 2017, 4427 unités de fromage ont été vendues pour un total de 45756.05 €.<yt:par/><yt:text-eval
+	yid="0x35CD"
+	class="TextGranule"
+	success="true"
+	id-write="87"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="152"
+></yt:text-eval></yt:item></yt:enum><yt:text-eval
+	yid="0x35D2"
+	class="TextGranule"
+	success="true"
+	id-write="89"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="158"
+></yt:text-eval></yt:text-eval></yt:text-eval></yt:text-eval> And <yt:text-eval
+	yid="_texts:Test1"
+	class="TextFunction"
+	dsl="Test 1"
+	success="true"
+	id-write="91"
+	src-file="_texts/Test1.ytextfunction.yml"
+	src-line="2"
+><yt:text-eval
+	yid="_texts:Test1_text"
+	class="MultilingualText"
+	success="true"
+	id-write="92"
+	src-file="_texts/Test1.ytextfunction.yml"
+	src-line="5"
+><yt:text-eval
+	yid="_texts:Test1_text__en"
+	class="TextGranule"
+	success="true"
+	id-write="93"
+	src-file="_texts/Test1.ytextfunction.yml"
+	src-line="6"
+><yt:bold>Résultats de Test 1</yt:bold><yt:par/></yt:text-eval></yt:text-eval></yt:text-eval></yt:text-eval>
 			</y:txt>
 		</y:texts>
 	</y:results>
@@ -15,7 +153,7 @@
 		<y:action command="next-request"></y:action>
 		<y:dialog-session>
 			<y:request-count>1</y:request-count>
-			<y:start-timestamp>2019-07-04T15:47:03.834</y:start-timestamp>
+			<y:start-timestamp>2019-07-04T17:34:10.193</y:start-timestamp>
 		</y:dialog-session>
 		<y:data>
 			<y:instance yid="theGeneralData"/>
@@ -23,6 +161,7 @@
 		<y:gathering-store></y:gathering-store>
 	</y:dataset>
 	<y:settings
+		write-text-stack="true"
 		freeze-random="true"></y:settings>
 	<y:data-end>
 		<y:logging>
@@ -30,7 +169,7 @@
 				index="1"
 				level="warning"
 				nature="alert"
-				origin-nb-ms="1.54">
+				origin-nb-ms="1.92">
 				<y:message>The Xml attributes yclass=City and yid=CITY_ALL are present all together: CITY_ALL is an existing object, therefore yclass is useless and therefore ignored (current line = 20, file = C:\yseop\projects\Training\test\input\inputTestInitial.xml)</y:message>
 				<y:alert-type
 					type="external-alert"
@@ -44,7 +183,7 @@
 				index="2"
 				level="warning"
 				nature="alert"
-				origin-nb-ms="1.65">
+				origin-nb-ms="2.07">
 				<y:message>The Xml attributes yclass=City and yid=CITY_NEW_YORK are present all together: CITY_NEW_YORK is an existing object, therefore yclass is useless and therefore ignored (current line = 24, file = C:\yseop\projects\Training\test\input\inputTestInitial.xml)</y:message>
 				<y:alert-type
 					type="external-alert"
@@ -58,7 +197,7 @@
 				index="3"
 				level="warning"
 				nature="alert"
-				origin-nb-ms="1.78">
+				origin-nb-ms="2.25">
 				<y:message>The Xml attributes yclass=City and yid=CITY_PARIS are present all together: CITY_PARIS is an existing object, therefore yclass is useless and therefore ignored (current line = 34, file = C:\yseop\projects\Training\test\input\inputTestInitial.xml)</y:message>
 				<y:alert-type
 					type="external-alert"
@@ -72,7 +211,7 @@
 				index="4"
 				level="warning"
 				nature="alert"
-				origin-nb-ms="1.96">
+				origin-nb-ms="2.51">
 				<y:message>The Xml attributes yclass=Product and yid=PRODUCT_ALL are present all together: PRODUCT_ALL is an existing object, therefore yclass is useless and therefore ignored (current line = 52, file = C:\yseop\projects\Training\test\input\inputTestInitial.xml)</y:message>
 				<y:alert-type
 					type="external-alert"
@@ -86,7 +225,7 @@
 				index="5"
 				level="warning"
 				nature="alert"
-				origin-nb-ms="2.09">
+				origin-nb-ms="2.71">
 				<y:message>The Xml attributes yclass=Product and yid=PRODUCT_PROVOLOGNE are present all together: PRODUCT_PROVOLOGNE is an existing object, therefore yclass is useless and therefore ignored (current line = 60, file = C:\yseop\projects\Training\test\input\inputTestInitial.xml)</y:message>
 				<y:alert-type
 					type="external-alert"
@@ -100,7 +239,7 @@
 				index="6"
 				level="warning"
 				nature="alert"
-				origin-nb-ms="2.19">
+				origin-nb-ms="2.85">
 				<y:message>The Xml attributes yclass=Product and yid=PRODUCT_AMERICAN are present all together: PRODUCT_AMERICAN is an existing object, therefore yclass is useless and therefore ignored (current line = 65, file = C:\yseop\projects\Training\test\input\inputTestInitial.xml)</y:message>
 				<y:alert-type
 					type="external-alert"
@@ -114,7 +253,7 @@
 				index="7"
 				level="warning"
 				nature="alert"
-				origin-nb-ms="2.63">
+				origin-nb-ms="3.36">
 				<y:message>The Xml attributes yclass=Store and yid=STORE_ALL are present all together: STORE_ALL is an existing object, therefore yclass is useless and therefore ignored (current line = 119, file = C:\yseop\projects\Training\test\input\inputTestInitial.xml)</y:message>
 				<y:alert-type
 					type="external-alert"
@@ -128,7 +267,7 @@
 				index="8"
 				level="warning"
 				nature="alert"
-				origin-nb-ms="2.83">
+				origin-nb-ms="4.46">
 				<y:message>The Xml attributes yclass=Store and yid=STORE_CAPITAL_CHEESE_STORE are present all together: STORE_CAPITAL_CHEESE_STORE is an existing object, therefore yclass is useless and therefore ignored (current line = 135, file = C:\yseop\projects\Training\test\input\inputTestInitial.xml)</y:message>
 				<y:alert-type
 					type="external-alert"
@@ -142,7 +281,7 @@
 				index="9"
 				level="warning"
 				nature="alert"
-				origin-nb-ms="3.09">
+				origin-nb-ms="4.90">
 				<y:message>The Xml attributes yclass=Store and yid=STORE_DELUXE_CHEESE_STORE are present all together: STORE_DELUXE_CHEESE_STORE is an existing object, therefore yclass is useless and therefore ignored (current line = 165, file = C:\yseop\projects\Training\test\input\inputTestInitial.xml)</y:message>
 				<y:alert-type
 					type="external-alert"
@@ -156,7 +295,7 @@
 				index="10"
 				level="warning"
 				nature="alert"
-				origin-nb-ms="34.62">
+				origin-nb-ms="37.74">
 				<y:message>It is more efficient to exploit symbolic objects as a key (here 1)</y:message>
 				<y:alert-type
 					type="kb-alert"
@@ -170,7 +309,7 @@
 				index="11"
 				level="warning"
 				nature="alert"
-				origin-nb-ms="41.72">
+				origin-nb-ms="45.78">
 				<y:message>Garbage collector dynTableValues (4653 to free in 29962) (call number 1)</y:message>
 				<y:alert-type
 					type="kb-alert"
@@ -184,7 +323,7 @@
 				index="12"
 				level="warning"
 				nature="alert"
-				origin-nb-ms="49.31">
+				origin-nb-ms="53.18">
 				<y:message>Garbage collector dynTableValues (4653 to free in 29962) (call number 2)</y:message>
 				<y:alert-type
 					type="kb-alert"
@@ -198,7 +337,7 @@
 				index="13"
 				level="warning"
 				nature="alert"
-				origin-nb-ms="56.67">
+				origin-nb-ms="65.92">
 				<y:message>Garbage collector dynTableValues (4653 to free in 29962) (call number 3)</y:message>
 				<y:alert-type
 					type="kb-alert"
@@ -212,7 +351,7 @@
 				index="14"
 				level="warning"
 				nature="alert"
-				origin-nb-ms="70.60">
+				origin-nb-ms="74.32">
 				<y:message>Garbage collector dynTableValues (4653 to free in 29962) (call number 4)</y:message>
 				<y:alert-type
 					type="kb-alert"
@@ -226,7 +365,7 @@
 				index="15"
 				level="warning"
 				nature="alert"
-				origin-nb-ms="80.39">
+				origin-nb-ms="83.30">
 				<y:message>Garbage collector dynTableValues (4653 to free in 29962) (call number 5)</y:message>
 				<y:alert-type
 					type="kb-alert"
@@ -240,7 +379,7 @@
 				index="16"
 				level="warning"
 				nature="alert"
-				origin-nb-ms="91.94">
+				origin-nb-ms="90.49">
 				<y:message>Garbage collector dynTableValues (4653 to free in 29962) (call number 6)</y:message>
 				<y:alert-type
 					type="kb-alert"
@@ -254,7 +393,7 @@
 				index="17"
 				level="warning"
 				nature="alert"
-				origin-nb-ms="98.96">
+				origin-nb-ms="99.20">
 				<y:message>Garbage collector dynTableValues (4653 to free in 29962) (call number 7)</y:message>
 				<y:alert-type
 					type="kb-alert"
@@ -269,11 +408,11 @@
 			<y:language
 				id="en"/>
 			<y:random
-				seed="390562006"
+				seed="1562254450"
 				peak="0"/>
 			<y:process
-				id="3FD4"
-				start-runtime="2019-07-04T15:47:03.751"
+				id="6128"
+				start-runtime="2019-07-04T17:34:10.104"
 				runtime="erunbc_"
 				engine-version="7.2.4"
 				os="WINDOWS 6.2"
@@ -284,15 +423,15 @@
 				creation-date="2019-03-07"
 				expiration-date="2019-12-30"/>
 			<y:request-exec-time
-				begin="2019-07-04T15:47:03.834"
-				end="2019-07-04T15:47:03.956"/>
+				begin="2019-07-04T17:34:10.193"
+				end="2019-07-04T17:34:10.329"/>
 			<y:stat
 				errors="0"
 				warnings="17"
 				success-rule-fire="0"
 				text-write="90"
 				main-words="298"
-				main-chars="1620"/>
+				main-chars="1621"/>
 		</y:synthesis>
 	</y:data-end>
 </y:output>

@@ -72,7 +72,7 @@ complete DEBUGGER_KB_TRACE_TEXT
 complete DEBUGGER_KB_TRACE_TEXT_EVAL_STRUCTURE
 
 		/* Active the text structure traces */
-//--> active	true
+--> active	true
 
 		/* If the value is:
 			_LITERAL_LOG:
@@ -90,7 +90,7 @@ complete DEBUGGER_KB_TRACE_TEXT_EVAL_STRUCTURE
 			_EXTERNAL_XML_PATH_WITHOUT_TEXT_CONTENT:
 				xx
 		*/
-//--> mode		//_LITERAL_LOG
+--> mode		_LITERAL_LOG
 				//_EXTERNAL_XML_PATH_WITH_TEXT_CONTENT
 				//_APPEND_LITERAL_LOG
 				//_EXTERNAL_LITERAL_LOG_NATIVE_FORMAT
