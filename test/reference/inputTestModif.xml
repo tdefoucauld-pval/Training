@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="C:/yseop/projects/Training/dialog/../dialog/output.xsl"?>
+<y:output xmlns:y="http://www.yseop.com/engine/6" xmlns:yt="http://www.yseop.com/text/2" xmlns:yd="http://www.yseop.com/dialog/2" xmlns:yd-b="http://www.yseop.com/dialog/binding/1">
+	<y:results>
+		<y:texts>
+			<y:txt id="finalDocument" index="1" name="text1" format="xml-dialect"><yt:text-eval
+	yid="0x2F4A"
+	class="TextMail"
+	success="true"
+	id-write="2"
+	src-file="_technical/internalWorkflow.dcl"
+	src-line="74"
+><yt:text-eval
+	yid="_texts:resultat"
+	class="TextFunction"
+	dsl="resultat"
+	success="true"
+	id-write="7"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="2"
+><yt:text-eval
+	yid="_texts:resultat_text"
+	class="MultilingualText"
+	success="true"
+	id-write="8"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="5"
+><yt:text-eval
+	yid="_texts:resultat_text__en"
+	class="TextGranule"
+	success="true"
+	id-write="9"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="6"
+><yt:bold>Résultats pour la ville de Paris:<yt:par/>Magasin Capital Cheese Store</yt:bold><yt:par/>En 2017, 4109 unités de fromage ont été vendues pour un total de 69279.89 €.<yt:line/>Le fromage American du type Processed Cheese à été vendu à 484 exemplaires pour un montant total de 6717.9 €.<yt:line/>Le fromage le plus vendu est le Cheddar du type Semi Hard Cheese avec 854 exemplaires pour un montant de 10607.78 €, soit 15.31% des ventes totales du magasin.<yt:par/><yt:bold>Magasin Deluxe Cheese Store<yt:par/></yt:bold>En 2017, 6087 unités de fromage ont été vendues pour un total de 67484.26 €.<yt:line/>Le fromage Provologne du type Processed Cheese à été vendu à 645 exemplaires pour un montant total de 6441.95 €.<yt:line/>Le fromage le plus vendu est le Buffalo du type Fresh Cheese avec 465 exemplaires pour un montant de 8591.55 €, soit 12.73% des ventes totales du magasin.<yt:par/>Au total pour la ville de Paris, le fromage le plus vendu est le Buffalo du type Fresh Cheese avec 1420 exemplaires pour une valeur de 18682.45 €. Le fromage le moins vendu est le Cottage du type Fresh Cheese avec 472 exemplaires pour une valeur de 4498.82 €.<yt:par/><yt:text-eval
+	yid="0x35BD"
+	class="TextGranule"
+	success="true"
+	id-write="48"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="114"
+>La liste des 5 fromages les plus vendus à Paris est la suivante:</yt:text-eval> <yt:enum numbering="decimal"><yt:item>Le fromage Buffalo avec un total de 18682.45 €. <yt:text-eval
+	yid="0x35BA"
+	class="TextGranule"
+	success="true"
+	id-write="52"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="111"
+></yt:text-eval></yt:item><yt:item>Le fromage Cheddar avec un total de 14475.04 €. <yt:text-eval
+	yid="0x35BA"
+	class="TextGranule"
+	success="true"
+	id-write="56"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="111"
+></yt:text-eval></yt:item><yt:item>Le fromage Provologne avec un total de 11561.46 €. <yt:text-eval
+	yid="0x35BA"
+	class="TextGranule"
+	success="true"
+	id-write="60"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="111"
+></yt:text-eval></yt:item><yt:item>Le fromage Swiss avec un total de 8660 €. <yt:text-eval
+	yid="0x35BA"
+	class="TextGranule"
+	success="true"
+	id-write="64"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="111"
+></yt:text-eval></yt:item><yt:item>Le fromage American avec un total de 7689.64 €. <yt:text-eval
+	yid="0x35BB"
+	class="TextGranule"
+	success="true"
+	id-write="68"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="112"
+></yt:text-eval></yt:item></yt:enum><yt:text-eval
+	yid="0x35C0"
+	class="TextGranule"
+	success="true"
+	id-write="70"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="119"
+></yt:text-eval><yt:par/><yt:par/><yt:bold>Résultats pour la ville de <yt:text-eval
+	yid="REPRESENTANT_THE_MEMBER"
+	class="NlgRepresentant"
+	success="true"
+	id-write="72"
+	src-file="C:/yseop/projects/Training/lib/libCube/_classes/Member.yclass"
+	src-line="46"
+><yt:text-eval
+	yid="0x308D"
+	class="TextGranule"
+	success="true"
+	id-write="73"
+	src-file="C:/yseop/projects/Training/lib/libCube/_classes/Member.yclass"
+	src-line="47"
+>New York</yt:text-eval></yt:text-eval>:<yt:par/></yt:bold><yt:text-eval
+	yid="0x35CF"
+	class="TextGranule"
+	success="true"
+	id-write="75"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="154"
+></yt:text-eval><yt:enum numbering="bullet"><yt:item><yt:bold>Magasin American Special Cheeses</yt:bold><yt:par/>En 2017, 6144 unités de fromage ont été vendues pour un total de 65852.44 €.<yt:par/><yt:text-eval
+	yid="0x35CC"
+	class="TextGranule"
+	success="true"
+	id-write="81"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="151"
+></yt:text-eval></yt:item><yt:item><yt:bold>Magasin Cheese For All</yt:bold><yt:par/>En 2017, 4427 unités de fromage ont été vendues pour un total de 45754.05 €.<yt:par/><yt:text-eval
+	yid="0x35CD"
+	class="TextGranule"
+	success="true"
+	id-write="87"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="152"
+></yt:text-eval></yt:item></yt:enum><yt:text-eval
+	yid="0x35D2"
+	class="TextGranule"
+	success="true"
+	id-write="89"
+	src-file="_texts/resultat.ytextfunction.yml"
+	src-line="158"
+></yt:text-eval></yt:text-eval></yt:text-eval></yt:text-eval> And <yt:text-eval
+	yid="_texts:Test1"
+	class="TextFunction"
+	dsl="Test 1"
+	success="true"
+	id-write="91"
+	src-file="_texts/Test1.ytextfunction.yml"
+	src-line="2"
+><yt:text-eval
+	yid="_texts:Test1_text"
+	class="MultilingualText"
+	success="true"
+	id-write="92"
+	src-file="_texts/Test1.ytextfunction.yml"
+	src-line="5"
+><yt:text-eval
+	yid="_texts:Test1_text__en"
+	class="TextGranule"
+	success="true"
+	id-write="93"
+	src-file="_texts/Test1.ytextfunction.yml"
+	src-line="6"
+><yt:bold>Résultats de Test 1</yt:bold><yt:par/></yt:text-eval></yt:text-eval></yt:text-eval></yt:text-eval>
+			</y:txt>
+		</y:texts>
+	</y:results>
+	<y:dataset>
+		<y:action command="next-request"></y:action>
+		<y:dialog-session>
+			<y:request-count>1</y:request-count>
+			<y:start-timestamp>2019-07-11T16:36:05.081</y:start-timestamp>
+		</y:dialog-session>
+		<y:data>
+			<y:instance yid="theGeneralData"/>
+		</y:data>
+		<y:gathering-store></y:gathering-store>
+	</y:dataset>
+	<y:settings
+		write-text-stack="true"
+		freeze-random="true"></y:settings>
+	<y:data-end>
+		<y:logging>
+			<y:log
+				index="1"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="1.00">
+				<y:message>The Xml attributes yclass=City and yid=CITY_ALL are present all together: CITY_ALL is an existing object, therefore yclass is useless and therefore ignored (current line = 20, file = C:\yseop\projects\Training\test\input\inputTestModif.xml)</y:message>
+				<y:alert-type
+					type="external-alert"
+					sub-type-code="35"
+					sub-type-name="xml-read"
+					code="W241"
+					owner="external"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="2"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="1.07">
+				<y:message>The Xml attributes yclass=City and yid=CITY_NEW_YORK are present all together: CITY_NEW_YORK is an existing object, therefore yclass is useless and therefore ignored (current line = 24, file = C:\yseop\projects\Training\test\input\inputTestModif.xml)</y:message>
+				<y:alert-type
+					type="external-alert"
+					sub-type-code="35"
+					sub-type-name="xml-read"
+					code="W241"
+					owner="external"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="3"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="1.14">
+				<y:message>The Xml attributes yclass=City and yid=CITY_PARIS are present all together: CITY_PARIS is an existing object, therefore yclass is useless and therefore ignored (current line = 34, file = C:\yseop\projects\Training\test\input\inputTestModif.xml)</y:message>
+				<y:alert-type
+					type="external-alert"
+					sub-type-code="35"
+					sub-type-name="xml-read"
+					code="W241"
+					owner="external"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="4"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="1.25">
+				<y:message>The Xml attributes yclass=Product and yid=PRODUCT_ALL are present all together: PRODUCT_ALL is an existing object, therefore yclass is useless and therefore ignored (current line = 52, file = C:\yseop\projects\Training\test\input\inputTestModif.xml)</y:message>
+				<y:alert-type
+					type="external-alert"
+					sub-type-code="35"
+					sub-type-name="xml-read"
+					code="W241"
+					owner="external"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="5"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="1.32">
+				<y:message>The Xml attributes yclass=Product and yid=PRODUCT_PROVOLOGNE are present all together: PRODUCT_PROVOLOGNE is an existing object, therefore yclass is useless and therefore ignored (current line = 60, file = C:\yseop\projects\Training\test\input\inputTestModif.xml)</y:message>
+				<y:alert-type
+					type="external-alert"
+					sub-type-code="35"
+					sub-type-name="xml-read"
+					code="W241"
+					owner="external"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="6"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="1.37">
+				<y:message>The Xml attributes yclass=Product and yid=PRODUCT_AMERICAN are present all together: PRODUCT_AMERICAN is an existing object, therefore yclass is useless and therefore ignored (current line = 65, file = C:\yseop\projects\Training\test\input\inputTestModif.xml)</y:message>
+				<y:alert-type
+					type="external-alert"
+					sub-type-code="35"
+					sub-type-name="xml-read"
+					code="W241"
+					owner="external"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="7"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="1.60">
+				<y:message>The Xml attributes yclass=Store and yid=STORE_ALL are present all together: STORE_ALL is an existing object, therefore yclass is useless and therefore ignored (current line = 119, file = C:\yseop\projects\Training\test\input\inputTestModif.xml)</y:message>
+				<y:alert-type
+					type="external-alert"
+					sub-type-code="35"
+					sub-type-name="xml-read"
+					code="W241"
+					owner="external"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="8"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="1.70">
+				<y:message>The Xml attributes yclass=Store and yid=STORE_CAPITAL_CHEESE_STORE are present all together: STORE_CAPITAL_CHEESE_STORE is an existing object, therefore yclass is useless and therefore ignored (current line = 135, file = C:\yseop\projects\Training\test\input\inputTestModif.xml)</y:message>
+				<y:alert-type
+					type="external-alert"
+					sub-type-code="35"
+					sub-type-name="xml-read"
+					code="W241"
+					owner="external"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="9"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="1.84">
+				<y:message>The Xml attributes yclass=Store and yid=STORE_DELUXE_CHEESE_STORE are present all together: STORE_DELUXE_CHEESE_STORE is an existing object, therefore yclass is useless and therefore ignored (current line = 165, file = C:\yseop\projects\Training\test\input\inputTestModif.xml)</y:message>
+				<y:alert-type
+					type="external-alert"
+					sub-type-code="35"
+					sub-type-name="xml-read"
+					code="W241"
+					owner="external"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="10"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="19.92">
+				<y:message>It is more efficient to exploit symbolic objects as a key (here 1)</y:message>
+				<y:alert-type
+					type="kb-alert"
+					sub-type-code="30"
+					sub-type-name="implicit-check"
+					code="W82"
+					owner="yseop"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="11"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="24.67">
+				<y:message>Garbage collector dynTableValues (4653 to free in 29962) (call number 1)</y:message>
+				<y:alert-type
+					type="kb-alert"
+					sub-type-code="30"
+					sub-type-name="implicit-check"
+					code="W87"
+					owner="yseop"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="12"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="32.14">
+				<y:message>Garbage collector dynTableValues (4653 to free in 29962) (call number 2)</y:message>
+				<y:alert-type
+					type="kb-alert"
+					sub-type-code="30"
+					sub-type-name="implicit-check"
+					code="W87"
+					owner="yseop"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="13"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="40.43">
+				<y:message>Garbage collector dynTableValues (4653 to free in 29962) (call number 3)</y:message>
+				<y:alert-type
+					type="kb-alert"
+					sub-type-code="30"
+					sub-type-name="implicit-check"
+					code="W87"
+					owner="yseop"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="14"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="47.53">
+				<y:message>Garbage collector dynTableValues (4653 to free in 29962) (call number 4)</y:message>
+				<y:alert-type
+					type="kb-alert"
+					sub-type-code="30"
+					sub-type-name="implicit-check"
+					code="W87"
+					owner="yseop"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="15"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="52.75">
+				<y:message>Garbage collector dynTableValues (4653 to free in 29962) (call number 5)</y:message>
+				<y:alert-type
+					type="kb-alert"
+					sub-type-code="30"
+					sub-type-name="implicit-check"
+					code="W87"
+					owner="yseop"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="16"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="57.76">
+				<y:message>Garbage collector dynTableValues (4653 to free in 29962) (call number 6)</y:message>
+				<y:alert-type
+					type="kb-alert"
+					sub-type-code="30"
+					sub-type-name="implicit-check"
+					code="W87"
+					owner="yseop"
+					source="yseop-engine"/>
+			</y:log>
+			<y:log
+				index="17"
+				level="warning"
+				nature="alert"
+				origin-nb-ms="63.57">
+				<y:message>Garbage collector dynTableValues (4653 to free in 29962) (call number 7)</y:message>
+				<y:alert-type
+					type="kb-alert"
+					sub-type-code="30"
+					sub-type-name="implicit-check"
+					code="W87"
+					owner="yseop"
+					source="yseop-engine"/>
+			</y:log>
+		</y:logging>
+		<y:synthesis>
+			<y:language
+				id="en"/>
+			<y:random
+				seed="260475961"
+				peak="0"/>
+			<y:process
+				id="908"
+				start-runtime="2019-07-11T16:36:05.009"
+				runtime="erunbc_"
+				engine-version="7.2.5"
+				os="WINDOWS 6.2"
+				computer-name="PVAL-89"/>
+			<y:key-user
+				name="For PVAL internal use - By AK"
+				email="Antoine.Bacalu@pval.com"
+				creation-date="2019-07-10"
+				expiration-date="2019-09-30"/>
+			<y:request-exec-time
+				begin="2019-07-11T16:36:05.081"
+				end="2019-07-11T16:36:05.164"/>
+			<y:stat
+				errors="0"
+				warnings="17"
+				success-rule-fire="0"
+				text-write="90"
+				main-words="298"
+				main-chars="1621"/>
+		</y:synthesis>
+	</y:data-end>
+</y:output>
