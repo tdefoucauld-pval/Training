@@ -6,7 +6,7 @@ args {}
       --> i18nName_en -> TextGranule _texts:Test1_text__en
          \( // Le Text Granule commence ici    
             \beginStyle(BOLD_STYLE)
-                Résultats de Test 1
+                Trancrède c'est le plus beau on est tous amoureuses de lui
                 \p()
             \endStyle
                     
