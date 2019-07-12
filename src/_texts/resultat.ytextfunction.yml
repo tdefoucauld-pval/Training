@@ -7,6 +7,8 @@ args {}
          \( // Le Text Granule commence ici  
 
             \beginStyle(BOLD_STYLE)
+                FLAVIE
+                \p()
                 Résultats pour la ville de
                 \value(theGeneralData.ccsGlobalSalePreviousYear.getDimension(DIMENSION_CITY).label)
                 :
