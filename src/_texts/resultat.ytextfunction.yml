@@ -55,7 +55,7 @@ args {}
             \value(theGeneralData.dcsGlobalSalePreviousYear.getMeasure(MEASURE_SOLD_UNITS).value)
             unités de fromage ont été vendues pour un total de
             \value(theGeneralData.dcsGlobalSalePreviousYear.getMeasure(MEASURE_SALE_VALUE).value)
-            €.
+            €. Mais Ali a piqué 25€ dans la caisse pour payer des verres aux p-valiens.
             \endOfLine
             , le fromage
             \value(theGeneralData.dcsProvologneSalePreviousYear.getDimension(DIMENSION_PRODUCT).label)
